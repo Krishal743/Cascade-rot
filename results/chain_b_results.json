@@ -1,0 +1,1707 @@
+[
+  {
+    "query": "Search for information about machine learning and summarize it",
+    "original": "Search for information about machine learning and summarize it",
+    "ptype": "clean",
+    "severity": "clean",
+    "chain": "chain_b",
+    "total_steps": 3,
+    "all_steps_successful": false,
+    "syntactic_success_rate": 0.3333333333333333,
+    "cascade_failure": true,
+    "steps": [
+      {
+        "step": 0,
+        "tool": "web_search",
+        "success": true,
+        "syntactic": true
+      },
+      {
+        "step": 1,
+        "tool": "extract_facts",
+        "success": false,
+        "syntactic": false
+      },
+      {
+        "step": 2,
+        "tool": "summarize",
+        "success": false,
+        "syntactic": false
+      }
+    ]
+  },
+  {
+    "query": "Search for iBformation about mactine learn7ng and summarize it",
+    "original": "Search for information about machine learning and summarize it",
+    "ptype": "typo",
+    "severity": "moderate",
+    "chain": "chain_b",
+    "total_steps": 3,
+    "all_steps_successful": false,
+    "syntactic_success_rate": 0.3333333333333333,
+    "cascade_failure": true,
+    "steps": [
+      {
+        "step": 0,
+        "tool": "web_search",
+        "success": true,
+        "syntactic": true
+      },
+      {
+        "step": 1,
+        "tool": "extract_facts",
+        "success": false,
+        "syntactic": false
+      },
+      {
+        "step": 2,
+        "tool": "summarize",
+        "success": false,
+        "syntactic": false
+      }
+    ]
+  },
+  {
+    "query": "Search for imformation wbout machin2 learning and summarize it",
+    "original": "Search for information about machine learning and summarize it",
+    "ptype": "typo",
+    "severity": "severe",
+    "chain": "chain_b",
+    "total_steps": 3,
+    "all_steps_successful": false,
+    "syntactic_success_rate": 0.3333333333333333,
+    "cascade_failure": true,
+    "steps": [
+      {
+        "step": 0,
+        "tool": "web_search",
+        "success": true,
+        "syntactic": true
+      },
+      {
+        "step": 1,
+        "tool": "extract_facts",
+        "success": false,
+        "syntactic": false
+      },
+      {
+        "step": 2,
+        "tool": "summarize",
+        "success": false,
+        "syntactic": false
+      }
+    ]
+  },
+  {
+    "query": "",
+    "original": "Search for information about machine learning and summarize it",
+    "ptype": "paraphrase",
+    "severity": "moderate",
+    "chain": "chain_b",
+    "total_steps": 3,
+    "all_steps_successful": false,
+    "syntactic_success_rate": 0.0,
+    "cascade_failure": true,
+    "steps": [
+      {
+        "step": 0,
+        "tool": "web_search",
+        "success": false,
+        "syntactic": false
+      },
+      {
+        "step": 1,
+        "tool": "extract_facts",
+        "success": false,
+        "syntactic": false
+      },
+      {
+        "step": 2,
+        "tool": "summarize",
+        "success": false,
+        "syntactic": false
+      }
+    ]
+  },
+  {
+    "query": "",
+    "original": "Search for information about machine learning and summarize it",
+    "ptype": "paraphrase",
+    "severity": "severe",
+    "chain": "chain_b",
+    "total_steps": 3,
+    "all_steps_successful": false,
+    "syntactic_success_rate": 0.0,
+    "cascade_failure": true,
+    "steps": [
+      {
+        "step": 0,
+        "tool": "web_search",
+        "success": false,
+        "syntactic": false
+      },
+      {
+        "step": 1,
+        "tool": "extract_facts",
+        "success": false,
+        "syntactic": false
+      },
+      {
+        "step": 2,
+        "tool": "summarize",
+        "success": false,
+        "syntactic": false
+      }
+    ]
+  },
+  {
+    "query": "Search for information about machine learning and summarize it?",
+    "original": "Search for information about machine learning and summarize it",
+    "ptype": "missing_context",
+    "severity": "moderate",
+    "chain": "chain_b",
+    "total_steps": 3,
+    "all_steps_successful": false,
+    "syntactic_success_rate": 0.3333333333333333,
+    "cascade_failure": true,
+    "steps": [
+      {
+        "step": 0,
+        "tool": "web_search",
+        "success": true,
+        "syntactic": true
+      },
+      {
+        "step": 1,
+        "tool": "extract_facts",
+        "success": false,
+        "syntactic": false
+      },
+      {
+        "step": 2,
+        "tool": "summarize",
+        "success": false,
+        "syntactic": false
+      }
+    ]
+  },
+  {
+    "query": "Search for information about machine learning and summarize it?",
+    "original": "Search for information about machine learning and summarize it",
+    "ptype": "missing_context",
+    "severity": "severe",
+    "chain": "chain_b",
+    "total_steps": 3,
+    "all_steps_successful": false,
+    "syntactic_success_rate": 0.3333333333333333,
+    "cascade_failure": true,
+    "steps": [
+      {
+        "step": 0,
+        "tool": "web_search",
+        "success": true,
+        "syntactic": true
+      },
+      {
+        "step": 1,
+        "tool": "extract_facts",
+        "success": false,
+        "syntactic": false
+      },
+      {
+        "step": 2,
+        "tool": "summarize",
+        "success": false,
+        "syntactic": false
+      }
+    ]
+  },
+  {
+    "query": "Search for information about machine learning and summarize it",
+    "original": "Search for information about machine learning and summarize it",
+    "ptype": "ambiguity",
+    "severity": "moderate",
+    "chain": "chain_b",
+    "total_steps": 3,
+    "all_steps_successful": false,
+    "syntactic_success_rate": 0.3333333333333333,
+    "cascade_failure": true,
+    "steps": [
+      {
+        "step": 0,
+        "tool": "web_search",
+        "success": true,
+        "syntactic": true
+      },
+      {
+        "step": 1,
+        "tool": "extract_facts",
+        "success": false,
+        "syntactic": false
+      },
+      {
+        "step": 2,
+        "tool": "summarize",
+        "success": false,
+        "syntactic": false
+      }
+    ]
+  },
+  {
+    "query": "Search for information about machine learning and summarize it",
+    "original": "Search for information about machine learning and summarize it",
+    "ptype": "ambiguity",
+    "severity": "severe",
+    "chain": "chain_b",
+    "total_steps": 3,
+    "all_steps_successful": false,
+    "syntactic_success_rate": 0.3333333333333333,
+    "cascade_failure": true,
+    "steps": [
+      {
+        "step": 0,
+        "tool": "web_search",
+        "success": true,
+        "syntactic": true
+      },
+      {
+        "step": 1,
+        "tool": "extract_facts",
+        "success": false,
+        "syntactic": false
+      },
+      {
+        "step": 2,
+        "tool": "summarize",
+        "success": false,
+        "syntactic": false
+      }
+    ]
+  },
+  {
+    "query": "Search for information about machine learning and summarize it unless...?",
+    "original": "Search for information about machine learning and summarize it",
+    "ptype": "negation",
+    "severity": "moderate",
+    "chain": "chain_b",
+    "total_steps": 3,
+    "all_steps_successful": false,
+    "syntactic_success_rate": 0.3333333333333333,
+    "cascade_failure": true,
+    "steps": [
+      {
+        "step": 0,
+        "tool": "web_search",
+        "success": true,
+        "syntactic": true
+      },
+      {
+        "step": 1,
+        "tool": "extract_facts",
+        "success": false,
+        "syntactic": false
+      },
+      {
+        "step": 2,
+        "tool": "summarize",
+        "success": false,
+        "syntactic": false
+      }
+    ]
+  },
+  {
+    "query": "Search for information about machine learning and summarize it unless...?",
+    "original": "Search for information about machine learning and summarize it",
+    "ptype": "negation",
+    "severity": "severe",
+    "chain": "chain_b",
+    "total_steps": 3,
+    "all_steps_successful": false,
+    "syntactic_success_rate": 0.3333333333333333,
+    "cascade_failure": true,
+    "steps": [
+      {
+        "step": 0,
+        "tool": "web_search",
+        "success": true,
+        "syntactic": true
+      },
+      {
+        "step": 1,
+        "tool": "extract_facts",
+        "success": false,
+        "syntactic": false
+      },
+      {
+        "step": 2,
+        "tool": "summarize",
+        "success": false,
+        "syntactic": false
+      }
+    ]
+  },
+  {
+    "query": "Find recent news about climate change and give me the key points",
+    "original": "Find recent news about climate change and give me the key points",
+    "ptype": "clean",
+    "severity": "clean",
+    "chain": "chain_b",
+    "total_steps": 3,
+    "all_steps_successful": false,
+    "syntactic_success_rate": 0.3333333333333333,
+    "cascade_failure": true,
+    "steps": [
+      {
+        "step": 0,
+        "tool": "web_search",
+        "success": true,
+        "syntactic": true
+      },
+      {
+        "step": 1,
+        "tool": "extract_facts",
+        "success": false,
+        "syntactic": false
+      },
+      {
+        "step": 2,
+        "tool": "summarize",
+        "success": false,
+        "syntactic": false
+      }
+    ]
+  },
+  {
+    "query": "Find 5ecent ne!s abouR climate change and give me the key poin$s",
+    "original": "Find recent news about climate change and give me the key points",
+    "ptype": "typo",
+    "severity": "moderate",
+    "chain": "chain_b",
+    "total_steps": 3,
+    "all_steps_successful": false,
+    "syntactic_success_rate": 0.3333333333333333,
+    "cascade_failure": true,
+    "steps": [
+      {
+        "step": 0,
+        "tool": "web_search",
+        "success": true,
+        "syntactic": true
+      },
+      {
+        "step": 1,
+        "tool": "extract_facts",
+        "success": false,
+        "syntactic": false
+      },
+      {
+        "step": 2,
+        "tool": "summarize",
+        "success": false,
+        "syntactic": false
+      }
+    ]
+  },
+  {
+    "query": "FUnd rec#nt n#ws about climate chang$ and give me the key points",
+    "original": "Find recent news about climate change and give me the key points",
+    "ptype": "typo",
+    "severity": "severe",
+    "chain": "chain_b",
+    "total_steps": 3,
+    "all_steps_successful": false,
+    "syntactic_success_rate": 0.3333333333333333,
+    "cascade_failure": true,
+    "steps": [
+      {
+        "step": 0,
+        "tool": "web_search",
+        "success": true,
+        "syntactic": true
+      },
+      {
+        "step": 1,
+        "tool": "extract_facts",
+        "success": false,
+        "syntactic": false
+      },
+      {
+        "step": 2,
+        "tool": "summarize",
+        "success": false,
+        "syntactic": false
+      }
+    ]
+  },
+  {
+    "query": "True",
+    "original": "Find recent news about climate change and give me the key points",
+    "ptype": "paraphrase",
+    "severity": "moderate",
+    "chain": "chain_b",
+    "total_steps": 3,
+    "all_steps_successful": false,
+    "syntactic_success_rate": 0.3333333333333333,
+    "cascade_failure": true,
+    "steps": [
+      {
+        "step": 0,
+        "tool": "web_search",
+        "success": true,
+        "syntactic": true
+      },
+      {
+        "step": 1,
+        "tool": "extract_facts",
+        "success": false,
+        "syntactic": false
+      },
+      {
+        "step": 2,
+        "tool": "summarize",
+        "success": false,
+        "syntactic": false
+      }
+    ]
+  },
+  {
+    "query": "True",
+    "original": "Find recent news about climate change and give me the key points",
+    "ptype": "paraphrase",
+    "severity": "severe",
+    "chain": "chain_b",
+    "total_steps": 3,
+    "all_steps_successful": false,
+    "syntactic_success_rate": 0.3333333333333333,
+    "cascade_failure": true,
+    "steps": [
+      {
+        "step": 0,
+        "tool": "web_search",
+        "success": true,
+        "syntactic": true
+      },
+      {
+        "step": 1,
+        "tool": "extract_facts",
+        "success": false,
+        "syntactic": false
+      },
+      {
+        "step": 2,
+        "tool": "summarize",
+        "success": false,
+        "syntactic": false
+      }
+    ]
+  },
+  {
+    "query": "Find recent news about climate change and give me the key points?",
+    "original": "Find recent news about climate change and give me the key points",
+    "ptype": "missing_context",
+    "severity": "moderate",
+    "chain": "chain_b",
+    "total_steps": 3,
+    "all_steps_successful": false,
+    "syntactic_success_rate": 0.3333333333333333,
+    "cascade_failure": true,
+    "steps": [
+      {
+        "step": 0,
+        "tool": "web_search",
+        "success": true,
+        "syntactic": true
+      },
+      {
+        "step": 1,
+        "tool": "extract_facts",
+        "success": false,
+        "syntactic": false
+      },
+      {
+        "step": 2,
+        "tool": "summarize",
+        "success": false,
+        "syntactic": false
+      }
+    ]
+  },
+  {
+    "query": "Find recent news about climate change and give me the key points?",
+    "original": "Find recent news about climate change and give me the key points",
+    "ptype": "missing_context",
+    "severity": "severe",
+    "chain": "chain_b",
+    "total_steps": 3,
+    "all_steps_successful": false,
+    "syntactic_success_rate": 0.3333333333333333,
+    "cascade_failure": true,
+    "steps": [
+      {
+        "step": 0,
+        "tool": "web_search",
+        "success": true,
+        "syntactic": true
+      },
+      {
+        "step": 1,
+        "tool": "extract_facts",
+        "success": false,
+        "syntactic": false
+      },
+      {
+        "step": 2,
+        "tool": "summarize",
+        "success": false,
+        "syntactic": false
+      }
+    ]
+  },
+  {
+    "query": "Find recent news about climate change and give me the key points",
+    "original": "Find recent news about climate change and give me the key points",
+    "ptype": "ambiguity",
+    "severity": "moderate",
+    "chain": "chain_b",
+    "total_steps": 3,
+    "all_steps_successful": false,
+    "syntactic_success_rate": 0.3333333333333333,
+    "cascade_failure": true,
+    "steps": [
+      {
+        "step": 0,
+        "tool": "web_search",
+        "success": true,
+        "syntactic": true
+      },
+      {
+        "step": 1,
+        "tool": "extract_facts",
+        "success": false,
+        "syntactic": false
+      },
+      {
+        "step": 2,
+        "tool": "summarize",
+        "success": false,
+        "syntactic": false
+      }
+    ]
+  },
+  {
+    "query": "Find recent news about climate change and give me the key points",
+    "original": "Find recent news about climate change and give me the key points",
+    "ptype": "ambiguity",
+    "severity": "severe",
+    "chain": "chain_b",
+    "total_steps": 3,
+    "all_steps_successful": false,
+    "syntactic_success_rate": 0.3333333333333333,
+    "cascade_failure": true,
+    "steps": [
+      {
+        "step": 0,
+        "tool": "web_search",
+        "success": true,
+        "syntactic": true
+      },
+      {
+        "step": 1,
+        "tool": "extract_facts",
+        "success": false,
+        "syntactic": false
+      },
+      {
+        "step": 2,
+        "tool": "summarize",
+        "success": false,
+        "syntactic": false
+      }
+    ]
+  },
+  {
+    "query": "Don't find recent news about climate change and give me the key points",
+    "original": "Find recent news about climate change and give me the key points",
+    "ptype": "negation",
+    "severity": "moderate",
+    "chain": "chain_b",
+    "total_steps": 3,
+    "all_steps_successful": false,
+    "syntactic_success_rate": 0.3333333333333333,
+    "cascade_failure": true,
+    "steps": [
+      {
+        "step": 0,
+        "tool": "web_search",
+        "success": true,
+        "syntactic": true
+      },
+      {
+        "step": 1,
+        "tool": "extract_facts",
+        "success": false,
+        "syntactic": false
+      },
+      {
+        "step": 2,
+        "tool": "summarize",
+        "success": false,
+        "syntactic": false
+      }
+    ]
+  },
+  {
+    "query": "Find recent news about climate change and give me the key points unless...?",
+    "original": "Find recent news about climate change and give me the key points",
+    "ptype": "negation",
+    "severity": "severe",
+    "chain": "chain_b",
+    "total_steps": 3,
+    "all_steps_successful": false,
+    "syntactic_success_rate": 0.3333333333333333,
+    "cascade_failure": true,
+    "steps": [
+      {
+        "step": 0,
+        "tool": "web_search",
+        "success": true,
+        "syntactic": true
+      },
+      {
+        "step": 1,
+        "tool": "extract_facts",
+        "success": false,
+        "syntactic": false
+      },
+      {
+        "step": 2,
+        "tool": "summarize",
+        "success": false,
+        "syntactic": false
+      }
+    ]
+  },
+  {
+    "query": "Look up what is quantum computing and summarize",
+    "original": "Look up what is quantum computing and summarize",
+    "ptype": "clean",
+    "severity": "clean",
+    "chain": "chain_b",
+    "total_steps": 3,
+    "all_steps_successful": false,
+    "syntactic_success_rate": 0.3333333333333333,
+    "cascade_failure": true,
+    "steps": [
+      {
+        "step": 0,
+        "tool": "web_search",
+        "success": true,
+        "syntactic": true
+      },
+      {
+        "step": 1,
+        "tool": "extract_facts",
+        "success": false,
+        "syntactic": false
+      },
+      {
+        "step": 2,
+        "tool": "summarize",
+        "success": false,
+        "syntactic": false
+      }
+    ]
+  },
+  {
+    "query": "Oook up what is quantum computinf and summarUze",
+    "original": "Look up what is quantum computing and summarize",
+    "ptype": "typo",
+    "severity": "moderate",
+    "chain": "chain_b",
+    "total_steps": 3,
+    "all_steps_successful": false,
+    "syntactic_success_rate": 0.3333333333333333,
+    "cascade_failure": true,
+    "steps": [
+      {
+        "step": 0,
+        "tool": "web_search",
+        "success": true,
+        "syntactic": true
+      },
+      {
+        "step": 1,
+        "tool": "extract_facts",
+        "success": false,
+        "syntactic": false
+      },
+      {
+        "step": 2,
+        "tool": "summarize",
+        "success": false,
+        "syntactic": false
+      }
+    ]
+  },
+  {
+    "query": "Look up wTat is q*antum computing and summaruze",
+    "original": "Look up what is quantum computing and summarize",
+    "ptype": "typo",
+    "severity": "severe",
+    "chain": "chain_b",
+    "total_steps": 3,
+    "all_steps_successful": false,
+    "syntactic_success_rate": 0.3333333333333333,
+    "cascade_failure": true,
+    "steps": [
+      {
+        "step": 0,
+        "tool": "web_search",
+        "success": true,
+        "syntactic": true
+      },
+      {
+        "step": 1,
+        "tool": "extract_facts",
+        "success": false,
+        "syntactic": false
+      },
+      {
+        "step": 2,
+        "tool": "summarize",
+        "success": false,
+        "syntactic": false
+      }
+    ]
+  },
+  {
+    "query": "",
+    "original": "Look up what is quantum computing and summarize",
+    "ptype": "paraphrase",
+    "severity": "moderate",
+    "chain": "chain_b",
+    "total_steps": 3,
+    "all_steps_successful": false,
+    "syntactic_success_rate": 0.0,
+    "cascade_failure": true,
+    "steps": [
+      {
+        "step": 0,
+        "tool": "web_search",
+        "success": false,
+        "syntactic": false
+      },
+      {
+        "step": 1,
+        "tool": "extract_facts",
+        "success": false,
+        "syntactic": false
+      },
+      {
+        "step": 2,
+        "tool": "summarize",
+        "success": false,
+        "syntactic": false
+      }
+    ]
+  },
+  {
+    "query": "",
+    "original": "Look up what is quantum computing and summarize",
+    "ptype": "paraphrase",
+    "severity": "severe",
+    "chain": "chain_b",
+    "total_steps": 3,
+    "all_steps_successful": false,
+    "syntactic_success_rate": 0.0,
+    "cascade_failure": true,
+    "steps": [
+      {
+        "step": 0,
+        "tool": "web_search",
+        "success": false,
+        "syntactic": false
+      },
+      {
+        "step": 1,
+        "tool": "extract_facts",
+        "success": false,
+        "syntactic": false
+      },
+      {
+        "step": 2,
+        "tool": "summarize",
+        "success": false,
+        "syntactic": false
+      }
+    ]
+  },
+  {
+    "query": "Look up what is quantum computing and summarize?",
+    "original": "Look up what is quantum computing and summarize",
+    "ptype": "missing_context",
+    "severity": "moderate",
+    "chain": "chain_b",
+    "total_steps": 3,
+    "all_steps_successful": false,
+    "syntactic_success_rate": 0.3333333333333333,
+    "cascade_failure": true,
+    "steps": [
+      {
+        "step": 0,
+        "tool": "web_search",
+        "success": true,
+        "syntactic": true
+      },
+      {
+        "step": 1,
+        "tool": "extract_facts",
+        "success": false,
+        "syntactic": false
+      },
+      {
+        "step": 2,
+        "tool": "summarize",
+        "success": false,
+        "syntactic": false
+      }
+    ]
+  },
+  {
+    "query": "Look up what is quantum computing and summarize?",
+    "original": "Look up what is quantum computing and summarize",
+    "ptype": "missing_context",
+    "severity": "severe",
+    "chain": "chain_b",
+    "total_steps": 3,
+    "all_steps_successful": false,
+    "syntactic_success_rate": 0.3333333333333333,
+    "cascade_failure": true,
+    "steps": [
+      {
+        "step": 0,
+        "tool": "web_search",
+        "success": true,
+        "syntactic": true
+      },
+      {
+        "step": 1,
+        "tool": "extract_facts",
+        "success": false,
+        "syntactic": false
+      },
+      {
+        "step": 2,
+        "tool": "summarize",
+        "success": false,
+        "syntactic": false
+      }
+    ]
+  },
+  {
+    "query": "Look up what is quantum computing and summarize",
+    "original": "Look up what is quantum computing and summarize",
+    "ptype": "ambiguity",
+    "severity": "moderate",
+    "chain": "chain_b",
+    "total_steps": 3,
+    "all_steps_successful": false,
+    "syntactic_success_rate": 0.3333333333333333,
+    "cascade_failure": true,
+    "steps": [
+      {
+        "step": 0,
+        "tool": "web_search",
+        "success": true,
+        "syntactic": true
+      },
+      {
+        "step": 1,
+        "tool": "extract_facts",
+        "success": false,
+        "syntactic": false
+      },
+      {
+        "step": 2,
+        "tool": "summarize",
+        "success": false,
+        "syntactic": false
+      }
+    ]
+  },
+  {
+    "query": "Look up what is quantum computing and summarize",
+    "original": "Look up what is quantum computing and summarize",
+    "ptype": "ambiguity",
+    "severity": "severe",
+    "chain": "chain_b",
+    "total_steps": 3,
+    "all_steps_successful": false,
+    "syntactic_success_rate": 0.3333333333333333,
+    "cascade_failure": true,
+    "steps": [
+      {
+        "step": 0,
+        "tool": "web_search",
+        "success": true,
+        "syntactic": true
+      },
+      {
+        "step": 1,
+        "tool": "extract_facts",
+        "success": false,
+        "syntactic": false
+      },
+      {
+        "step": 2,
+        "tool": "summarize",
+        "success": false,
+        "syntactic": false
+      }
+    ]
+  },
+  {
+    "query": "Don't look up what is quantum computing and summarize",
+    "original": "Look up what is quantum computing and summarize",
+    "ptype": "negation",
+    "severity": "moderate",
+    "chain": "chain_b",
+    "total_steps": 3,
+    "all_steps_successful": false,
+    "syntactic_success_rate": 0.0,
+    "cascade_failure": true,
+    "steps": [
+      {
+        "step": 0,
+        "tool": "web_search",
+        "success": false,
+        "syntactic": false
+      },
+      {
+        "step": 1,
+        "tool": "extract_facts",
+        "success": false,
+        "syntactic": false
+      },
+      {
+        "step": 2,
+        "tool": "summarize",
+        "success": false,
+        "syntactic": false
+      }
+    ]
+  },
+  {
+    "query": "Don't look up what is quantum computing and summarize",
+    "original": "Look up what is quantum computing and summarize",
+    "ptype": "negation",
+    "severity": "severe",
+    "chain": "chain_b",
+    "total_steps": 3,
+    "all_steps_successful": false,
+    "syntactic_success_rate": 0.0,
+    "cascade_failure": true,
+    "steps": [
+      {
+        "step": 0,
+        "tool": "web_search",
+        "success": false,
+        "syntactic": false
+      },
+      {
+        "step": 1,
+        "tool": "extract_facts",
+        "success": false,
+        "syntactic": false
+      },
+      {
+        "step": 2,
+        "tool": "summarize",
+        "success": false,
+        "syntactic": false
+      }
+    ]
+  },
+  {
+    "query": "Search for best practices in software development",
+    "original": "Search for best practices in software development",
+    "ptype": "clean",
+    "severity": "clean",
+    "chain": "chain_b",
+    "total_steps": 3,
+    "all_steps_successful": false,
+    "syntactic_success_rate": 0.3333333333333333,
+    "cascade_failure": true,
+    "steps": [
+      {
+        "step": 0,
+        "tool": "web_search",
+        "success": true,
+        "syntactic": true
+      },
+      {
+        "step": 1,
+        "tool": "extract_facts",
+        "success": false,
+        "syntactic": false
+      },
+      {
+        "step": 2,
+        "tool": "summarize",
+        "success": false,
+        "syntactic": false
+      }
+    ]
+  },
+  {
+    "query": "Search for bRst practices in s0ftware devSlopment",
+    "original": "Search for best practices in software development",
+    "ptype": "typo",
+    "severity": "moderate",
+    "chain": "chain_b",
+    "total_steps": 3,
+    "all_steps_successful": false,
+    "syntactic_success_rate": 0.3333333333333333,
+    "cascade_failure": true,
+    "steps": [
+      {
+        "step": 0,
+        "tool": "web_search",
+        "success": true,
+        "syntactic": true
+      },
+      {
+        "step": 1,
+        "tool": "extract_facts",
+        "success": false,
+        "syntactic": false
+      },
+      {
+        "step": 2,
+        "tool": "summarize",
+        "success": false,
+        "syntactic": false
+      }
+    ]
+  },
+  {
+    "query": "Search for fest Oractices in softwsre development",
+    "original": "Search for best practices in software development",
+    "ptype": "typo",
+    "severity": "severe",
+    "chain": "chain_b",
+    "total_steps": 3,
+    "all_steps_successful": false,
+    "syntactic_success_rate": 0.3333333333333333,
+    "cascade_failure": true,
+    "steps": [
+      {
+        "step": 0,
+        "tool": "web_search",
+        "success": true,
+        "syntactic": true
+      },
+      {
+        "step": 1,
+        "tool": "extract_facts",
+        "success": false,
+        "syntactic": false
+      },
+      {
+        "step": 2,
+        "tool": "summarize",
+        "success": false,
+        "syntactic": false
+      }
+    ]
+  },
+  {
+    "query": "False",
+    "original": "Search for best practices in software development",
+    "ptype": "paraphrase",
+    "severity": "moderate",
+    "chain": "chain_b",
+    "total_steps": 3,
+    "all_steps_successful": false,
+    "syntactic_success_rate": 0.3333333333333333,
+    "cascade_failure": true,
+    "steps": [
+      {
+        "step": 0,
+        "tool": "web_search",
+        "success": true,
+        "syntactic": true
+      },
+      {
+        "step": 1,
+        "tool": "extract_facts",
+        "success": false,
+        "syntactic": false
+      },
+      {
+        "step": 2,
+        "tool": "summarize",
+        "success": false,
+        "syntactic": false
+      }
+    ]
+  },
+  {
+    "query": "False",
+    "original": "Search for best practices in software development",
+    "ptype": "paraphrase",
+    "severity": "severe",
+    "chain": "chain_b",
+    "total_steps": 3,
+    "all_steps_successful": false,
+    "syntactic_success_rate": 0.3333333333333333,
+    "cascade_failure": true,
+    "steps": [
+      {
+        "step": 0,
+        "tool": "web_search",
+        "success": true,
+        "syntactic": true
+      },
+      {
+        "step": 1,
+        "tool": "extract_facts",
+        "success": false,
+        "syntactic": false
+      },
+      {
+        "step": 2,
+        "tool": "summarize",
+        "success": false,
+        "syntactic": false
+      }
+    ]
+  },
+  {
+    "query": "Search for best practices in software development?",
+    "original": "Search for best practices in software development",
+    "ptype": "missing_context",
+    "severity": "moderate",
+    "chain": "chain_b",
+    "total_steps": 3,
+    "all_steps_successful": false,
+    "syntactic_success_rate": 0.3333333333333333,
+    "cascade_failure": true,
+    "steps": [
+      {
+        "step": 0,
+        "tool": "web_search",
+        "success": true,
+        "syntactic": true
+      },
+      {
+        "step": 1,
+        "tool": "extract_facts",
+        "success": false,
+        "syntactic": false
+      },
+      {
+        "step": 2,
+        "tool": "summarize",
+        "success": false,
+        "syntactic": false
+      }
+    ]
+  },
+  {
+    "query": "Search for best practices in software development?",
+    "original": "Search for best practices in software development",
+    "ptype": "missing_context",
+    "severity": "severe",
+    "chain": "chain_b",
+    "total_steps": 3,
+    "all_steps_successful": false,
+    "syntactic_success_rate": 0.3333333333333333,
+    "cascade_failure": true,
+    "steps": [
+      {
+        "step": 0,
+        "tool": "web_search",
+        "success": true,
+        "syntactic": true
+      },
+      {
+        "step": 1,
+        "tool": "extract_facts",
+        "success": false,
+        "syntactic": false
+      },
+      {
+        "step": 2,
+        "tool": "summarize",
+        "success": false,
+        "syntactic": false
+      }
+    ]
+  },
+  {
+    "query": "Search for best practices in software development",
+    "original": "Search for best practices in software development",
+    "ptype": "ambiguity",
+    "severity": "moderate",
+    "chain": "chain_b",
+    "total_steps": 3,
+    "all_steps_successful": false,
+    "syntactic_success_rate": 0.3333333333333333,
+    "cascade_failure": true,
+    "steps": [
+      {
+        "step": 0,
+        "tool": "web_search",
+        "success": true,
+        "syntactic": true
+      },
+      {
+        "step": 1,
+        "tool": "extract_facts",
+        "success": false,
+        "syntactic": false
+      },
+      {
+        "step": 2,
+        "tool": "summarize",
+        "success": false,
+        "syntactic": false
+      }
+    ]
+  },
+  {
+    "query": "Search for best practices in software development",
+    "original": "Search for best practices in software development",
+    "ptype": "ambiguity",
+    "severity": "severe",
+    "chain": "chain_b",
+    "total_steps": 3,
+    "all_steps_successful": false,
+    "syntactic_success_rate": 0.3333333333333333,
+    "cascade_failure": true,
+    "steps": [
+      {
+        "step": 0,
+        "tool": "web_search",
+        "success": true,
+        "syntactic": true
+      },
+      {
+        "step": 1,
+        "tool": "extract_facts",
+        "success": false,
+        "syntactic": false
+      },
+      {
+        "step": 2,
+        "tool": "summarize",
+        "success": false,
+        "syntactic": false
+      }
+    ]
+  },
+  {
+    "query": "Don't search for best practices in software development",
+    "original": "Search for best practices in software development",
+    "ptype": "negation",
+    "severity": "moderate",
+    "chain": "chain_b",
+    "total_steps": 3,
+    "all_steps_successful": false,
+    "syntactic_success_rate": 0.6666666666666666,
+    "cascade_failure": true,
+    "steps": [
+      {
+        "step": 0,
+        "tool": "web_search",
+        "success": false,
+        "syntactic": false
+      },
+      {
+        "step": 1,
+        "tool": "extract_facts",
+        "success": true,
+        "syntactic": true
+      },
+      {
+        "step": 2,
+        "tool": "summarize",
+        "success": true,
+        "syntactic": true
+      }
+    ]
+  },
+  {
+    "query": "Don't search for best practices in software development",
+    "original": "Search for best practices in software development",
+    "ptype": "negation",
+    "severity": "severe",
+    "chain": "chain_b",
+    "total_steps": 3,
+    "all_steps_successful": false,
+    "syntactic_success_rate": 0.6666666666666666,
+    "cascade_failure": true,
+    "steps": [
+      {
+        "step": 0,
+        "tool": "web_search",
+        "success": false,
+        "syntactic": false
+      },
+      {
+        "step": 1,
+        "tool": "extract_facts",
+        "success": true,
+        "syntactic": true
+      },
+      {
+        "step": 2,
+        "tool": "summarize",
+        "success": true,
+        "syntactic": true
+      }
+    ]
+  },
+  {
+    "query": "Find information about renewable energy trends",
+    "original": "Find information about renewable energy trends",
+    "ptype": "clean",
+    "severity": "clean",
+    "chain": "chain_b",
+    "total_steps": 3,
+    "all_steps_successful": false,
+    "syntactic_success_rate": 0.3333333333333333,
+    "cascade_failure": true,
+    "steps": [
+      {
+        "step": 0,
+        "tool": "web_search",
+        "success": true,
+        "syntactic": true
+      },
+      {
+        "step": 1,
+        "tool": "extract_facts",
+        "success": false,
+        "syntactic": false
+      },
+      {
+        "step": 2,
+        "tool": "summarize",
+        "success": false,
+        "syntactic": false
+      }
+    ]
+  },
+  {
+    "query": "FinX information about remewable energy trends",
+    "original": "Find information about renewable energy trends",
+    "ptype": "typo",
+    "severity": "moderate",
+    "chain": "chain_b",
+    "total_steps": 3,
+    "all_steps_successful": false,
+    "syntactic_success_rate": 0.3333333333333333,
+    "cascade_failure": true,
+    "steps": [
+      {
+        "step": 0,
+        "tool": "web_search",
+        "success": true,
+        "syntactic": true
+      },
+      {
+        "step": 1,
+        "tool": "extract_facts",
+        "success": false,
+        "syntactic": false
+      },
+      {
+        "step": 2,
+        "tool": "summarize",
+        "success": false,
+        "syntactic": false
+      }
+    ]
+  },
+  {
+    "query": "Find information about remewable energy trFnds",
+    "original": "Find information about renewable energy trends",
+    "ptype": "typo",
+    "severity": "severe",
+    "chain": "chain_b",
+    "total_steps": 3,
+    "all_steps_successful": false,
+    "syntactic_success_rate": 0.3333333333333333,
+    "cascade_failure": true,
+    "steps": [
+      {
+        "step": 0,
+        "tool": "web_search",
+        "success": true,
+        "syntactic": true
+      },
+      {
+        "step": 1,
+        "tool": "extract_facts",
+        "success": false,
+        "syntactic": false
+      },
+      {
+        "step": 2,
+        "tool": "summarize",
+        "success": false,
+        "syntactic": false
+      }
+    ]
+  },
+  {
+    "query": "True",
+    "original": "Find information about renewable energy trends",
+    "ptype": "paraphrase",
+    "severity": "moderate",
+    "chain": "chain_b",
+    "total_steps": 3,
+    "all_steps_successful": false,
+    "syntactic_success_rate": 0.3333333333333333,
+    "cascade_failure": true,
+    "steps": [
+      {
+        "step": 0,
+        "tool": "web_search",
+        "success": true,
+        "syntactic": true
+      },
+      {
+        "step": 1,
+        "tool": "extract_facts",
+        "success": false,
+        "syntactic": false
+      },
+      {
+        "step": 2,
+        "tool": "summarize",
+        "success": false,
+        "syntactic": false
+      }
+    ]
+  },
+  {
+    "query": "True",
+    "original": "Find information about renewable energy trends",
+    "ptype": "paraphrase",
+    "severity": "severe",
+    "chain": "chain_b",
+    "total_steps": 3,
+    "all_steps_successful": false,
+    "syntactic_success_rate": 0.3333333333333333,
+    "cascade_failure": true,
+    "steps": [
+      {
+        "step": 0,
+        "tool": "web_search",
+        "success": true,
+        "syntactic": true
+      },
+      {
+        "step": 1,
+        "tool": "extract_facts",
+        "success": false,
+        "syntactic": false
+      },
+      {
+        "step": 2,
+        "tool": "summarize",
+        "success": false,
+        "syntactic": false
+      }
+    ]
+  },
+  {
+    "query": "Find information about renewable energy trends?",
+    "original": "Find information about renewable energy trends",
+    "ptype": "missing_context",
+    "severity": "moderate",
+    "chain": "chain_b",
+    "total_steps": 3,
+    "all_steps_successful": false,
+    "syntactic_success_rate": 0.3333333333333333,
+    "cascade_failure": true,
+    "steps": [
+      {
+        "step": 0,
+        "tool": "web_search",
+        "success": true,
+        "syntactic": true
+      },
+      {
+        "step": 1,
+        "tool": "extract_facts",
+        "success": false,
+        "syntactic": false
+      },
+      {
+        "step": 2,
+        "tool": "summarize",
+        "success": false,
+        "syntactic": false
+      }
+    ]
+  },
+  {
+    "query": "Find information about renewable energy trends?",
+    "original": "Find information about renewable energy trends",
+    "ptype": "missing_context",
+    "severity": "severe",
+    "chain": "chain_b",
+    "total_steps": 3,
+    "all_steps_successful": false,
+    "syntactic_success_rate": 0.3333333333333333,
+    "cascade_failure": true,
+    "steps": [
+      {
+        "step": 0,
+        "tool": "web_search",
+        "success": true,
+        "syntactic": true
+      },
+      {
+        "step": 1,
+        "tool": "extract_facts",
+        "success": false,
+        "syntactic": false
+      },
+      {
+        "step": 2,
+        "tool": "summarize",
+        "success": false,
+        "syntactic": false
+      }
+    ]
+  },
+  {
+    "query": "Find information about renewable energy trends",
+    "original": "Find information about renewable energy trends",
+    "ptype": "ambiguity",
+    "severity": "moderate",
+    "chain": "chain_b",
+    "total_steps": 3,
+    "all_steps_successful": false,
+    "syntactic_success_rate": 0.3333333333333333,
+    "cascade_failure": true,
+    "steps": [
+      {
+        "step": 0,
+        "tool": "web_search",
+        "success": true,
+        "syntactic": true
+      },
+      {
+        "step": 1,
+        "tool": "extract_facts",
+        "success": false,
+        "syntactic": false
+      },
+      {
+        "step": 2,
+        "tool": "summarize",
+        "success": false,
+        "syntactic": false
+      }
+    ]
+  },
+  {
+    "query": "Find information about renewable energy trends",
+    "original": "Find information about renewable energy trends",
+    "ptype": "ambiguity",
+    "severity": "severe",
+    "chain": "chain_b",
+    "total_steps": 3,
+    "all_steps_successful": false,
+    "syntactic_success_rate": 0.3333333333333333,
+    "cascade_failure": true,
+    "steps": [
+      {
+        "step": 0,
+        "tool": "web_search",
+        "success": true,
+        "syntactic": true
+      },
+      {
+        "step": 1,
+        "tool": "extract_facts",
+        "success": false,
+        "syntactic": false
+      },
+      {
+        "step": 2,
+        "tool": "summarize",
+        "success": false,
+        "syntactic": false
+      }
+    ]
+  },
+  {
+    "query": "Don't find information about renewable energy trends",
+    "original": "Find information about renewable energy trends",
+    "ptype": "negation",
+    "severity": "moderate",
+    "chain": "chain_b",
+    "total_steps": 3,
+    "all_steps_successful": false,
+    "syntactic_success_rate": 0.3333333333333333,
+    "cascade_failure": true,
+    "steps": [
+      {
+        "step": 0,
+        "tool": "web_search",
+        "success": true,
+        "syntactic": true
+      },
+      {
+        "step": 1,
+        "tool": "extract_facts",
+        "success": false,
+        "syntactic": false
+      },
+      {
+        "step": 2,
+        "tool": "summarize",
+        "success": false,
+        "syntactic": false
+      }
+    ]
+  },
+  {
+    "query": "Don't find information about renewable energy trends",
+    "original": "Find information about renewable energy trends",
+    "ptype": "negation",
+    "severity": "severe",
+    "chain": "chain_b",
+    "total_steps": 3,
+    "all_steps_successful": false,
+    "syntactic_success_rate": 0.3333333333333333,
+    "cascade_failure": true,
+    "steps": [
+      {
+        "step": 0,
+        "tool": "web_search",
+        "success": true,
+        "syntactic": true
+      },
+      {
+        "step": 1,
+        "tool": "extract_facts",
+        "success": false,
+        "syntactic": false
+      },
+      {
+        "step": 2,
+        "tool": "summarize",
+        "success": false,
+        "syntactic": false
+      }
+    ]
+  }
+]

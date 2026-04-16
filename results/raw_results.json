@@ -1,0 +1,992 @@
+[
+  {
+    "query": "What's the weather like in London?",
+    "original": "What's the weather like in London?",
+    "ptype": "clean",
+    "severity": "clean",
+    "step1_success": true,
+    "step2_success": true,
+    "cascade_failure": false
+  },
+  {
+    "query": "Wnat ' s the weXther .ike in London?",
+    "original": "What's the weather like in London?",
+    "ptype": "typo",
+    "severity": "moderate",
+    "step1_success": true,
+    "step2_success": true,
+    "cascade_failure": false
+  },
+  {
+    "query": "WhaG ' s the weathrr llke in London?",
+    "original": "What's the weather like in London?",
+    "ptype": "typo",
+    "severity": "severe",
+    "step1_success": true,
+    "step2_success": true,
+    "cascade_failure": false
+  },
+  {
+    "query": "Paraphrase",
+    "original": "What's the weather like in London?",
+    "ptype": "paraphrase",
+    "severity": "moderate",
+    "step1_success": true,
+    "step2_success": true,
+    "cascade_failure": false
+  },
+  {
+    "query": "Paraphrase",
+    "original": "What's the weather like in London?",
+    "ptype": "paraphrase",
+    "severity": "severe",
+    "step1_success": true,
+    "step2_success": true,
+    "cascade_failure": false
+  },
+  {
+    "query": "What's the weather like in?",
+    "original": "What's the weather like in London?",
+    "ptype": "missing_context",
+    "severity": "moderate",
+    "step1_success": true,
+    "step2_success": true,
+    "cascade_failure": false
+  },
+  {
+    "query": "What's the weather like in?",
+    "original": "What's the weather like in London?",
+    "ptype": "missing_context",
+    "severity": "severe",
+    "step1_success": true,
+    "step2_success": true,
+    "cascade_failure": false
+  },
+  {
+    "query": "What's the weather like in the city?",
+    "original": "What's the weather like in London?",
+    "ptype": "ambiguity",
+    "severity": "moderate",
+    "step1_success": true,
+    "step2_success": true,
+    "cascade_failure": false
+  },
+  {
+    "query": "What's the weather like in the city?",
+    "original": "What's the weather like in London?",
+    "ptype": "ambiguity",
+    "severity": "severe",
+    "step1_success": true,
+    "step2_success": true,
+    "cascade_failure": false
+  },
+  {
+    "query": "Don't what's the weather like in London?",
+    "original": "What's the weather like in London?",
+    "ptype": "negation",
+    "severity": "moderate",
+    "step1_success": true,
+    "step2_success": true,
+    "cascade_failure": false
+  },
+  {
+    "query": "What's the weather like in London unless...?",
+    "original": "What's the weather like in London?",
+    "ptype": "negation",
+    "severity": "severe",
+    "step1_success": true,
+    "step2_success": true,
+    "cascade_failure": false
+  },
+  {
+    "query": "Should I bring an umbrella in Paris?",
+    "original": "Should I bring an umbrella in Paris?",
+    "ptype": "clean",
+    "severity": "clean",
+    "step1_success": true,
+    "step2_success": true,
+    "cascade_failure": false
+  },
+  {
+    "query": "ShoulW I brlng an umbrella in PariD?",
+    "original": "Should I bring an umbrella in Paris?",
+    "ptype": "typo",
+    "severity": "moderate",
+    "step1_success": true,
+    "step2_success": true,
+    "cascade_failure": false
+  },
+  {
+    "query": "zhould I brinf an umbrella in PZris?",
+    "original": "Should I bring an umbrella in Paris?",
+    "ptype": "typo",
+    "severity": "severe",
+    "step1_success": true,
+    "step2_success": true,
+    "cascade_failure": false
+  },
+  {
+    "query": "Paraphrase: Should I bring a umbrella in Paris?",
+    "original": "Should I bring an umbrella in Paris?",
+    "ptype": "paraphrase",
+    "severity": "moderate",
+    "step1_success": true,
+    "step2_success": true,
+    "cascade_failure": false
+  },
+  {
+    "query": "Paraphrase: Should I bring a umbrella in Paris?",
+    "original": "Should I bring an umbrella in Paris?",
+    "ptype": "paraphrase",
+    "severity": "severe",
+    "step1_success": true,
+    "step2_success": true,
+    "cascade_failure": false
+  },
+  {
+    "query": "Should bring an umbrella in?",
+    "original": "Should I bring an umbrella in Paris?",
+    "ptype": "missing_context",
+    "severity": "moderate",
+    "step1_success": true,
+    "step2_success": true,
+    "cascade_failure": false
+  },
+  {
+    "query": "Should bring an umbrella in?",
+    "original": "Should I bring an umbrella in Paris?",
+    "ptype": "missing_context",
+    "severity": "severe",
+    "step1_success": true,
+    "step2_success": true,
+    "cascade_failure": false
+  },
+  {
+    "query": "Should I bring an rain gear in the capital?",
+    "original": "Should I bring an umbrella in Paris?",
+    "ptype": "ambiguity",
+    "severity": "moderate",
+    "step1_success": true,
+    "step2_success": true,
+    "cascade_failure": false
+  },
+  {
+    "query": "Should I bring an rain gear in the capital?",
+    "original": "Should I bring an umbrella in Paris?",
+    "ptype": "ambiguity",
+    "severity": "severe",
+    "step1_success": true,
+    "step2_success": true,
+    "cascade_failure": false
+  },
+  {
+    "query": "Should I not bring an umbrella in Paris?",
+    "original": "Should I bring an umbrella in Paris?",
+    "ptype": "negation",
+    "severity": "moderate",
+    "step1_success": true,
+    "step2_success": true,
+    "cascade_failure": false
+  },
+  {
+    "query": "Should I not bring an umbrella in Paris?",
+    "original": "Should I bring an umbrella in Paris?",
+    "ptype": "negation",
+    "severity": "severe",
+    "step1_success": true,
+    "step2_success": true,
+    "cascade_failure": false
+  },
+  {
+    "query": "Is it sunny in Tokyo today?",
+    "original": "Is it sunny in Tokyo today?",
+    "ptype": "clean",
+    "severity": "clean",
+    "step1_success": true,
+    "step2_success": true,
+    "cascade_failure": false
+  },
+  {
+    "query": "Is it sunnt in ToLyo toEay?",
+    "original": "Is it sunny in Tokyo today?",
+    "ptype": "typo",
+    "severity": "moderate",
+    "step1_success": true,
+    "step2_success": true,
+    "cascade_failure": false
+  },
+  {
+    "query": "Is it sunnt in Tok6o tKday?",
+    "original": "Is it sunny in Tokyo today?",
+    "ptype": "typo",
+    "severity": "severe",
+    "step1_success": true,
+    "step2_success": true,
+    "cascade_failure": false
+  },
+  {
+    "query": "Paraphrase: Is it sunny in Tokyo today?",
+    "original": "Is it sunny in Tokyo today?",
+    "ptype": "paraphrase",
+    "severity": "moderate",
+    "step1_success": true,
+    "step2_success": true,
+    "cascade_failure": false
+  },
+  {
+    "query": "Paraphrase: Is it sunny in Tokyo today?",
+    "original": "Is it sunny in Tokyo today?",
+    "ptype": "paraphrase",
+    "severity": "severe",
+    "step1_success": true,
+    "step2_success": true,
+    "cascade_failure": false
+  },
+  {
+    "query": "Is it sunny in today??",
+    "original": "Is it sunny in Tokyo today?",
+    "ptype": "missing_context",
+    "severity": "moderate",
+    "step1_success": true,
+    "step2_success": true,
+    "cascade_failure": false
+  },
+  {
+    "query": "Is it sunny in today??",
+    "original": "Is it sunny in Tokyo today?",
+    "ptype": "missing_context",
+    "severity": "severe",
+    "step1_success": true,
+    "step2_success": true,
+    "cascade_failure": false
+  },
+  {
+    "query": "Is it clear in the metropolitan area today?",
+    "original": "Is it sunny in Tokyo today?",
+    "ptype": "ambiguity",
+    "severity": "moderate",
+    "step1_success": true,
+    "step2_success": true,
+    "cascade_failure": false
+  },
+  {
+    "query": "Is it clear in the metropolitan area today?",
+    "original": "Is it sunny in Tokyo today?",
+    "ptype": "ambiguity",
+    "severity": "severe",
+    "step1_success": true,
+    "step2_success": true,
+    "cascade_failure": false
+  },
+  {
+    "query": "Don't is it sunny in Tokyo today?",
+    "original": "Is it sunny in Tokyo today?",
+    "ptype": "negation",
+    "severity": "moderate",
+    "step1_success": true,
+    "step2_success": true,
+    "cascade_failure": false
+  },
+  {
+    "query": "Don't is it sunny in Tokyo today?",
+    "original": "Is it sunny in Tokyo today?",
+    "ptype": "negation",
+    "severity": "severe",
+    "step1_success": true,
+    "step2_success": true,
+    "cascade_failure": false
+  },
+  {
+    "query": "Will it rain in New York tomorrow?",
+    "original": "Will it rain in New York tomorrow?",
+    "ptype": "clean",
+    "severity": "clean",
+    "step1_success": true,
+    "step2_success": true,
+    "cascade_failure": false
+  },
+  {
+    "query": "WilO it rxin in New York tomordow?",
+    "original": "Will it rain in New York tomorrow?",
+    "ptype": "typo",
+    "severity": "moderate",
+    "step1_success": true,
+    "step2_success": true,
+    "cascade_failure": false
+  },
+  {
+    "query": "Wi.l it rain in New Yo#k tomorr)w?",
+    "original": "Will it rain in New York tomorrow?",
+    "ptype": "typo",
+    "severity": "severe",
+    "step1_success": true,
+    "step2_success": true,
+    "cascade_failure": false
+  },
+  {
+    "query": "Paraphrase: Will it rain in New York tomorrow?",
+    "original": "Will it rain in New York tomorrow?",
+    "ptype": "paraphrase",
+    "severity": "moderate",
+    "step1_success": true,
+    "step2_success": true,
+    "cascade_failure": false
+  },
+  {
+    "query": "Paraphrase: Will it rain in New York tomorrow?",
+    "original": "Will it rain in New York tomorrow?",
+    "ptype": "paraphrase",
+    "severity": "severe",
+    "step1_success": true,
+    "step2_success": true,
+    "cascade_failure": false
+  },
+  {
+    "query": "Will it rain in tomorrow??",
+    "original": "Will it rain in New York tomorrow?",
+    "ptype": "missing_context",
+    "severity": "moderate",
+    "step1_success": true,
+    "step2_success": true,
+    "cascade_failure": false
+  },
+  {
+    "query": "Will it rain in tomorrow??",
+    "original": "Will it rain in New York tomorrow?",
+    "ptype": "missing_context",
+    "severity": "severe",
+    "step1_success": true,
+    "step2_success": true,
+    "cascade_failure": false
+  },
+  {
+    "query": "Will it rain in the big city tomorrow?",
+    "original": "Will it rain in New York tomorrow?",
+    "ptype": "ambiguity",
+    "severity": "moderate",
+    "step1_success": true,
+    "step2_success": true,
+    "cascade_failure": false
+  },
+  {
+    "query": "Will it rain in the big city tomorrow?",
+    "original": "Will it rain in New York tomorrow?",
+    "ptype": "ambiguity",
+    "severity": "severe",
+    "step1_success": true,
+    "step2_success": true,
+    "cascade_failure": false
+  },
+  {
+    "query": "Don't will it rain in New York tomorrow?",
+    "original": "Will it rain in New York tomorrow?",
+    "ptype": "negation",
+    "severity": "moderate",
+    "step1_success": true,
+    "step2_success": true,
+    "cascade_failure": false
+  },
+  {
+    "query": "Will it not rain in New York tomorrow?",
+    "original": "Will it rain in New York tomorrow?",
+    "ptype": "negation",
+    "severity": "severe",
+    "step1_success": true,
+    "step2_success": true,
+    "cascade_failure": false
+  },
+  {
+    "query": "What's the temperature in Berlin?",
+    "original": "What's the temperature in Berlin?",
+    "ptype": "clean",
+    "severity": "clean",
+    "step1_success": true,
+    "step2_success": true,
+    "cascade_failure": false
+  },
+  {
+    "query": "Shat ' s the temp$rature in Berlih?",
+    "original": "What's the temperature in Berlin?",
+    "ptype": "typo",
+    "severity": "moderate",
+    "step1_success": true,
+    "step2_success": true,
+    "cascade_failure": false
+  },
+  {
+    "query": "Whst ' s the temperatu#e in Berpin?",
+    "original": "What's the temperature in Berlin?",
+    "ptype": "typo",
+    "severity": "severe",
+    "step1_success": true,
+    "step2_success": true,
+    "cascade_failure": false
+  },
+  {
+    "query": "Paraphrase",
+    "original": "What's the temperature in Berlin?",
+    "ptype": "paraphrase",
+    "severity": "moderate",
+    "step1_success": true,
+    "step2_success": true,
+    "cascade_failure": false
+  },
+  {
+    "query": "Paraphrase",
+    "original": "What's the temperature in Berlin?",
+    "ptype": "paraphrase",
+    "severity": "severe",
+    "step1_success": true,
+    "step2_success": true,
+    "cascade_failure": false
+  },
+  {
+    "query": "What's the temperature in?",
+    "original": "What's the temperature in Berlin?",
+    "ptype": "missing_context",
+    "severity": "moderate",
+    "step1_success": true,
+    "step2_success": true,
+    "cascade_failure": false
+  },
+  {
+    "query": "What's the temperature in?",
+    "original": "What's the temperature in Berlin?",
+    "ptype": "missing_context",
+    "severity": "severe",
+    "step1_success": true,
+    "step2_success": true,
+    "cascade_failure": false
+  },
+  {
+    "query": "What's the temperature in the german city?",
+    "original": "What's the temperature in Berlin?",
+    "ptype": "ambiguity",
+    "severity": "moderate",
+    "step1_success": true,
+    "step2_success": true,
+    "cascade_failure": false
+  },
+  {
+    "query": "What's the temperature in the german city?",
+    "original": "What's the temperature in Berlin?",
+    "ptype": "ambiguity",
+    "severity": "severe",
+    "step1_success": true,
+    "step2_success": true,
+    "cascade_failure": false
+  },
+  {
+    "query": "What's the temperature in Berlin unless...?",
+    "original": "What's the temperature in Berlin?",
+    "ptype": "negation",
+    "severity": "moderate",
+    "step1_success": true,
+    "step2_success": true,
+    "cascade_failure": false
+  },
+  {
+    "query": "What's the temperature in Berlin unless...?",
+    "original": "What's the temperature in Berlin?",
+    "ptype": "negation",
+    "severity": "severe",
+    "step1_success": true,
+    "step2_success": true,
+    "cascade_failure": false
+  },
+  {
+    "query": "Do I need an umbrella for Munich?",
+    "original": "Do I need an umbrella for Munich?",
+    "ptype": "clean",
+    "severity": "clean",
+    "step1_success": true,
+    "step2_success": true,
+    "cascade_failure": false
+  },
+  {
+    "query": "Do I neer an umbre:la for MunicJ?",
+    "original": "Do I need an umbrella for Munich?",
+    "ptype": "typo",
+    "severity": "moderate",
+    "step1_success": true,
+    "step2_success": true,
+    "cascade_failure": false
+  },
+  {
+    "query": "Do I nsed an kmbrella for Munuch?",
+    "original": "Do I need an umbrella for Munich?",
+    "ptype": "typo",
+    "severity": "severe",
+    "step1_success": true,
+    "step2_success": true,
+    "cascade_failure": false
+  },
+  {
+    "query": "False",
+    "original": "Do I need an umbrella for Munich?",
+    "ptype": "paraphrase",
+    "severity": "moderate",
+    "step1_success": true,
+    "step2_success": true,
+    "cascade_failure": false
+  },
+  {
+    "query": "False",
+    "original": "Do I need an umbrella for Munich?",
+    "ptype": "paraphrase",
+    "severity": "severe",
+    "step1_success": true,
+    "step2_success": true,
+    "cascade_failure": false
+  },
+  {
+    "query": "Do need an umbrella for?",
+    "original": "Do I need an umbrella for Munich?",
+    "ptype": "missing_context",
+    "severity": "moderate",
+    "step1_success": true,
+    "step2_success": true,
+    "cascade_failure": false
+  },
+  {
+    "query": "Do need an umbrella for?",
+    "original": "Do I need an umbrella for Munich?",
+    "ptype": "missing_context",
+    "severity": "severe",
+    "step1_success": true,
+    "step2_success": true,
+    "cascade_failure": false
+  },
+  {
+    "query": "Do I need an rain gear for the bavarian city?",
+    "original": "Do I need an umbrella for Munich?",
+    "ptype": "ambiguity",
+    "severity": "moderate",
+    "step1_success": true,
+    "step2_success": true,
+    "cascade_failure": false
+  },
+  {
+    "query": "Do I need an rain gear for the bavarian city?",
+    "original": "Do I need an umbrella for Munich?",
+    "ptype": "ambiguity",
+    "severity": "severe",
+    "step1_success": true,
+    "step2_success": true,
+    "cascade_failure": false
+  },
+  {
+    "query": "Do I need an umbrella for Munich unless...?",
+    "original": "Do I need an umbrella for Munich?",
+    "ptype": "negation",
+    "severity": "moderate",
+    "step1_success": true,
+    "step2_success": true,
+    "cascade_failure": false
+  },
+  {
+    "query": "Do I need an umbrella for Munich unless...?",
+    "original": "Do I need an umbrella for Munich?",
+    "ptype": "negation",
+    "severity": "severe",
+    "step1_success": true,
+    "step2_success": true,
+    "cascade_failure": false
+  },
+  {
+    "query": "Is it going to be cloudy in Sydney?",
+    "original": "Is it going to be cloudy in Sydney?",
+    "ptype": "clean",
+    "severity": "clean",
+    "step1_success": true,
+    "step2_success": true,
+    "cascade_failure": false
+  },
+  {
+    "query": "Is it goihg to be cliudy in Sydnet?",
+    "original": "Is it going to be cloudy in Sydney?",
+    "ptype": "typo",
+    "severity": "moderate",
+    "step1_success": true,
+    "step2_success": true,
+    "cascade_failure": false
+  },
+  {
+    "query": "Is it goijg to be cloidy in xydney?",
+    "original": "Is it going to be cloudy in Sydney?",
+    "ptype": "typo",
+    "severity": "severe",
+    "step1_success": true,
+    "step2_success": true,
+    "cascade_failure": false
+  },
+  {
+    "query": "Paraphrase",
+    "original": "Is it going to be cloudy in Sydney?",
+    "ptype": "paraphrase",
+    "severity": "moderate",
+    "step1_success": true,
+    "step2_success": true,
+    "cascade_failure": false
+  },
+  {
+    "query": "Paraphrase",
+    "original": "Is it going to be cloudy in Sydney?",
+    "ptype": "paraphrase",
+    "severity": "severe",
+    "step1_success": true,
+    "step2_success": true,
+    "cascade_failure": false
+  },
+  {
+    "query": "Is it going to be cloudy in?",
+    "original": "Is it going to be cloudy in Sydney?",
+    "ptype": "missing_context",
+    "severity": "moderate",
+    "step1_success": true,
+    "step2_success": true,
+    "cascade_failure": false
+  },
+  {
+    "query": "Is it going to be cloudy in?",
+    "original": "Is it going to be cloudy in Sydney?",
+    "ptype": "missing_context",
+    "severity": "severe",
+    "step1_success": true,
+    "step2_success": true,
+    "cascade_failure": false
+  },
+  {
+    "query": "Is it going to be overcast in the australian city?",
+    "original": "Is it going to be cloudy in Sydney?",
+    "ptype": "ambiguity",
+    "severity": "moderate",
+    "step1_success": true,
+    "step2_success": true,
+    "cascade_failure": false
+  },
+  {
+    "query": "Is it going to be overcast in the australian city?",
+    "original": "Is it going to be cloudy in Sydney?",
+    "ptype": "ambiguity",
+    "severity": "severe",
+    "step1_success": true,
+    "step2_success": true,
+    "cascade_failure": false
+  },
+  {
+    "query": "Don't is it going to be cloudy in Sydney?",
+    "original": "Is it going to be cloudy in Sydney?",
+    "ptype": "negation",
+    "severity": "moderate",
+    "step1_success": true,
+    "step2_success": true,
+    "cascade_failure": false
+  },
+  {
+    "query": "Don't is it going to be cloudy in Sydney?",
+    "original": "Is it going to be cloudy in Sydney?",
+    "ptype": "negation",
+    "severity": "severe",
+    "step1_success": true,
+    "step2_success": true,
+    "cascade_failure": false
+  },
+  {
+    "query": "What should I wear in Rome today?",
+    "original": "What should I wear in Rome today?",
+    "ptype": "clean",
+    "severity": "clean",
+    "step1_success": true,
+    "step2_success": true,
+    "cascade_failure": false
+  },
+  {
+    "query": "Wjat should I wear in Romr goday?",
+    "original": "What should I wear in Rome today?",
+    "ptype": "typo",
+    "severity": "moderate",
+    "step1_success": true,
+    "step2_success": true,
+    "cascade_failure": false
+  },
+  {
+    "query": "Whag should I eear in RoJe today?",
+    "original": "What should I wear in Rome today?",
+    "ptype": "typo",
+    "severity": "severe",
+    "step1_success": true,
+    "step2_success": true,
+    "cascade_failure": false
+  },
+  {
+    "query": "False",
+    "original": "What should I wear in Rome today?",
+    "ptype": "paraphrase",
+    "severity": "moderate",
+    "step1_success": true,
+    "step2_success": true,
+    "cascade_failure": false
+  },
+  {
+    "query": "False",
+    "original": "What should I wear in Rome today?",
+    "ptype": "paraphrase",
+    "severity": "severe",
+    "step1_success": true,
+    "step2_success": true,
+    "cascade_failure": false
+  },
+  {
+    "query": "What should wear in today??",
+    "original": "What should I wear in Rome today?",
+    "ptype": "missing_context",
+    "severity": "moderate",
+    "step1_success": true,
+    "step2_success": true,
+    "cascade_failure": false
+  },
+  {
+    "query": "What should wear in today??",
+    "original": "What should I wear in Rome today?",
+    "ptype": "missing_context",
+    "severity": "severe",
+    "step1_success": true,
+    "step2_success": true,
+    "cascade_failure": false
+  },
+  {
+    "query": "What should I wear in the italian city today?",
+    "original": "What should I wear in Rome today?",
+    "ptype": "ambiguity",
+    "severity": "moderate",
+    "step1_success": true,
+    "step2_success": true,
+    "cascade_failure": false
+  },
+  {
+    "query": "What should I wear in the italian city today?",
+    "original": "What should I wear in Rome today?",
+    "ptype": "ambiguity",
+    "severity": "severe",
+    "step1_success": true,
+    "step2_success": true,
+    "cascade_failure": false
+  },
+  {
+    "query": "Don't what should I wear in Rome today?",
+    "original": "What should I wear in Rome today?",
+    "ptype": "negation",
+    "severity": "moderate",
+    "step1_success": true,
+    "step2_success": true,
+    "cascade_failure": false
+  },
+  {
+    "query": "Don't what should I wear in Rome today?",
+    "original": "What should I wear in Rome today?",
+    "ptype": "negation",
+    "severity": "severe",
+    "step1_success": true,
+    "step2_success": true,
+    "cascade_failure": false
+  },
+  {
+    "query": "Check weather for Madrid please",
+    "original": "Check weather for Madrid please",
+    "ptype": "clean",
+    "severity": "clean",
+    "step1_success": true,
+    "step2_success": true,
+    "cascade_failure": false
+  },
+  {
+    "query": "fheck weather for Madrid p,ease",
+    "original": "Check weather for Madrid please",
+    "ptype": "typo",
+    "severity": "moderate",
+    "step1_success": true,
+    "step2_success": true,
+    "cascade_failure": false
+  },
+  {
+    "query": "Check weather for Madrjd )lease",
+    "original": "Check weather for Madrid please",
+    "ptype": "typo",
+    "severity": "severe",
+    "step1_success": true,
+    "step2_success": true,
+    "cascade_failure": false
+  },
+  {
+    "query": "Paraphrase: Check Madrid for Madrid please please check weather for Madrid please paraphrase:",
+    "original": "Check weather for Madrid please",
+    "ptype": "paraphrase",
+    "severity": "moderate",
+    "step1_success": true,
+    "step2_success": true,
+    "cascade_failure": false
+  },
+  {
+    "query": "Paraphrase: Check Madrid for Madrid please please check weather for Madrid please paraphrase:",
+    "original": "Check weather for Madrid please",
+    "ptype": "paraphrase",
+    "severity": "severe",
+    "step1_success": true,
+    "step2_success": true,
+    "cascade_failure": false
+  },
+  {
+    "query": "Check weather for please?",
+    "original": "Check weather for Madrid please",
+    "ptype": "missing_context",
+    "severity": "moderate",
+    "step1_success": true,
+    "step2_success": true,
+    "cascade_failure": false
+  },
+  {
+    "query": "Check weather for please?",
+    "original": "Check weather for Madrid please",
+    "ptype": "missing_context",
+    "severity": "severe",
+    "step1_success": true,
+    "step2_success": true,
+    "cascade_failure": false
+  },
+  {
+    "query": "Check weather for the spanish city please",
+    "original": "Check weather for Madrid please",
+    "ptype": "ambiguity",
+    "severity": "moderate",
+    "step1_success": true,
+    "step2_success": true,
+    "cascade_failure": false
+  },
+  {
+    "query": "Check weather for the spanish city please",
+    "original": "Check weather for Madrid please",
+    "ptype": "ambiguity",
+    "severity": "severe",
+    "step1_success": true,
+    "step2_success": true,
+    "cascade_failure": false
+  },
+  {
+    "query": "Don't check weather for Madrid please",
+    "original": "Check weather for Madrid please",
+    "ptype": "negation",
+    "severity": "moderate",
+    "step1_success": true,
+    "step2_success": true,
+    "cascade_failure": false
+  },
+  {
+    "query": "Check weather for Madrid please unless...?",
+    "original": "Check weather for Madrid please",
+    "ptype": "negation",
+    "severity": "severe",
+    "step1_success": true,
+    "step2_success": true,
+    "cascade_failure": false
+  },
+  {
+    "query": "Will I need a coat in Vienna?",
+    "original": "Will I need a coat in Vienna?",
+    "ptype": "clean",
+    "severity": "clean",
+    "step1_success": true,
+    "step2_success": true,
+    "cascade_failure": false
+  },
+  {
+    "query": "@ill I need a c)at in VienBa?",
+    "original": "Will I need a coat in Vienna?",
+    "ptype": "typo",
+    "severity": "moderate",
+    "step1_success": true,
+    "step2_success": true,
+    "cascade_failure": false
+  },
+  {
+    "query": "Wilk I beed a coa6 in Vienna?",
+    "original": "Will I need a coat in Vienna?",
+    "ptype": "typo",
+    "severity": "severe",
+    "step1_success": true,
+    "step2_success": true,
+    "cascade_failure": false
+  },
+  {
+    "query": "Paraphrase: Will I need a coat in Vienna?",
+    "original": "Will I need a coat in Vienna?",
+    "ptype": "paraphrase",
+    "severity": "moderate",
+    "step1_success": true,
+    "step2_success": true,
+    "cascade_failure": false
+  },
+  {
+    "query": "Paraphrase: Will I need a coat in Vienna?",
+    "original": "Will I need a coat in Vienna?",
+    "ptype": "paraphrase",
+    "severity": "severe",
+    "step1_success": true,
+    "step2_success": true,
+    "cascade_failure": false
+  },
+  {
+    "query": "Will need a coat in?",
+    "original": "Will I need a coat in Vienna?",
+    "ptype": "missing_context",
+    "severity": "moderate",
+    "step1_success": true,
+    "step2_success": true,
+    "cascade_failure": false
+  },
+  {
+    "query": "Will need a coat in?",
+    "original": "Will I need a coat in Vienna?",
+    "ptype": "missing_context",
+    "severity": "severe",
+    "step1_success": true,
+    "step2_success": true,
+    "cascade_failure": false
+  },
+  {
+    "query": "Will I need a coat in the austrian city?",
+    "original": "Will I need a coat in Vienna?",
+    "ptype": "ambiguity",
+    "severity": "moderate",
+    "step1_success": true,
+    "step2_success": true,
+    "cascade_failure": false
+  },
+  {
+    "query": "Will I need a coat in the austrian city?",
+    "original": "Will I need a coat in Vienna?",
+    "ptype": "ambiguity",
+    "severity": "severe",
+    "step1_success": true,
+    "step2_success": true,
+    "cascade_failure": false
+  },
+  {
+    "query": "Don't will I need a coat in Vienna?",
+    "original": "Will I need a coat in Vienna?",
+    "ptype": "negation",
+    "severity": "moderate",
+    "step1_success": true,
+    "step2_success": true,
+    "cascade_failure": false
+  },
+  {
+    "query": "Don't will I need a coat in Vienna?",
+    "original": "Will I need a coat in Vienna?",
+    "ptype": "negation",
+    "severity": "severe",
+    "step1_success": true,
+    "step2_success": true,
+    "cascade_failure": false
+  }
+]

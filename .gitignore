@@ -1,0 +1,93 @@
+# =======================
+# CORE PROJECT
+# =======================
+PROJECT_CONTEXT.md
+
+# =======================
+# VIRTUAL ENV & DEPENDENCIES
+# =======================
+venv/
+bin/
+lib/
+include/
+*.egg-info/
+
+# =======================
+# PYTHON CACHE
+# =======================
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+*.pyc
+
+# =======================
+# JUPYTER
+# =======================
+.ipynb_checkpoints/
+
+# =======================
+# IDE
+# =======================
+.idea/
+.vscode/
+
+# =======================
+# OS
+# =======================
+.DS_Store
+Thumbs.db
+
+# =======================
+# MODELS (downloaded)
+# =======================
+models/
+
+# =======================
+# NODE
+# =======================
+node_modules/
+package*.json
+
+# =======================
+# ENVIRONMENT
+# =======================
+.env
+.env.local
+
+# =======================
+# HPC/SLURM
+# =======================
+slurm-*.out
+*.job
+
+# =======================
+# LATEX AUXILIARY
+# =======================
+*.aux
+*.log
+*.out
+*.toc
+*.bbl
+*.blg
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+
+# =======================
+# TEMP/DEBUG SCRIPTS (ignore)
+# =======================
+scripts/debug_*.py
+scripts/test_*.py
+scripts/quick_*.py
+
+# =======================
+# EXPERIMENT CHECKPOINTS (ignore)
+# =======================
+results/checkpoint_*.json
+results/*_checkpoint_*.json
+
+# =======================
+# BACKUP FINAL (ignore old backup)
+# =======================
+results/backup_final/

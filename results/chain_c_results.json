@@ -1,0 +1,2367 @@
+[
+  {
+    "query": "Schedule a meeting for next Monday at 3pm",
+    "original": "Schedule a meeting for next Monday at 3pm",
+    "ptype": "clean",
+    "severity": "clean",
+    "chain": "chain_c",
+    "total_steps": 5,
+    "all_steps_successful": false,
+    "syntactic_success_rate": 0.2,
+    "cascade_failure": true,
+    "steps": [
+      {
+        "step": 0,
+        "tool": "parse_date",
+        "success": true,
+        "syntactic": true
+      },
+      {
+        "step": 1,
+        "tool": "check_calendar",
+        "success": false,
+        "syntactic": false
+      },
+      {
+        "step": 2,
+        "tool": "find_conflicts",
+        "success": false,
+        "syntactic": false
+      },
+      {
+        "step": 3,
+        "tool": "suggest_time",
+        "success": false,
+        "syntactic": false
+      },
+      {
+        "step": 4,
+        "tool": "create_event",
+        "success": false,
+        "syntactic": false
+      }
+    ]
+  },
+  {
+    "query": "ScheFule a mReting for next Mlnday at 3pm",
+    "original": "Schedule a meeting for next Monday at 3pm",
+    "ptype": "typo",
+    "severity": "moderate",
+    "chain": "chain_c",
+    "total_steps": 5,
+    "all_steps_successful": true,
+    "syntactic_success_rate": 1.0,
+    "cascade_failure": false,
+    "steps": [
+      {
+        "step": 0,
+        "tool": "parse_date",
+        "success": true,
+        "syntactic": true
+      },
+      {
+        "step": 1,
+        "tool": "check_calendar",
+        "success": true,
+        "syntactic": true
+      },
+      {
+        "step": 2,
+        "tool": "find_conflicts",
+        "success": true,
+        "syntactic": true
+      },
+      {
+        "step": 3,
+        "tool": "suggest_time",
+        "success": true,
+        "syntactic": true
+      },
+      {
+        "step": 4,
+        "tool": "create_event",
+        "success": true,
+        "syntactic": true
+      }
+    ]
+  },
+  {
+    "query": "Schedupe a meeting for Jext MondWy at 3pm",
+    "original": "Schedule a meeting for next Monday at 3pm",
+    "ptype": "typo",
+    "severity": "severe",
+    "chain": "chain_c",
+    "total_steps": 5,
+    "all_steps_successful": false,
+    "syntactic_success_rate": 0.2,
+    "cascade_failure": true,
+    "steps": [
+      {
+        "step": 0,
+        "tool": "parse_date",
+        "success": true,
+        "syntactic": true
+      },
+      {
+        "step": 1,
+        "tool": "check_calendar",
+        "success": false,
+        "syntactic": false
+      },
+      {
+        "step": 2,
+        "tool": "find_conflicts",
+        "success": false,
+        "syntactic": false
+      },
+      {
+        "step": 3,
+        "tool": "suggest_time",
+        "success": false,
+        "syntactic": false
+      },
+      {
+        "step": 4,
+        "tool": "create_event",
+        "success": false,
+        "syntactic": false
+      }
+    ]
+  },
+  {
+    "query": "False",
+    "original": "Schedule a meeting for next Monday at 3pm",
+    "ptype": "paraphrase",
+    "severity": "moderate",
+    "chain": "chain_c",
+    "total_steps": 5,
+    "all_steps_successful": true,
+    "syntactic_success_rate": 1.0,
+    "cascade_failure": false,
+    "steps": [
+      {
+        "step": 0,
+        "tool": "parse_date",
+        "success": true,
+        "syntactic": true
+      },
+      {
+        "step": 1,
+        "tool": "check_calendar",
+        "success": true,
+        "syntactic": true
+      },
+      {
+        "step": 2,
+        "tool": "find_conflicts",
+        "success": true,
+        "syntactic": true
+      },
+      {
+        "step": 3,
+        "tool": "suggest_time",
+        "success": true,
+        "syntactic": true
+      },
+      {
+        "step": 4,
+        "tool": "create_event",
+        "success": true,
+        "syntactic": true
+      }
+    ]
+  },
+  {
+    "query": "False",
+    "original": "Schedule a meeting for next Monday at 3pm",
+    "ptype": "paraphrase",
+    "severity": "severe",
+    "chain": "chain_c",
+    "total_steps": 5,
+    "all_steps_successful": true,
+    "syntactic_success_rate": 1.0,
+    "cascade_failure": false,
+    "steps": [
+      {
+        "step": 0,
+        "tool": "parse_date",
+        "success": true,
+        "syntactic": true
+      },
+      {
+        "step": 1,
+        "tool": "check_calendar",
+        "success": true,
+        "syntactic": true
+      },
+      {
+        "step": 2,
+        "tool": "find_conflicts",
+        "success": true,
+        "syntactic": true
+      },
+      {
+        "step": 3,
+        "tool": "suggest_time",
+        "success": true,
+        "syntactic": true
+      },
+      {
+        "step": 4,
+        "tool": "create_event",
+        "success": true,
+        "syntactic": true
+      }
+    ]
+  },
+  {
+    "query": "Schedule a meeting for next at 3pm?",
+    "original": "Schedule a meeting for next Monday at 3pm",
+    "ptype": "missing_context",
+    "severity": "moderate",
+    "chain": "chain_c",
+    "total_steps": 5,
+    "all_steps_successful": false,
+    "syntactic_success_rate": 0.2,
+    "cascade_failure": true,
+    "steps": [
+      {
+        "step": 0,
+        "tool": "parse_date",
+        "success": true,
+        "syntactic": true
+      },
+      {
+        "step": 1,
+        "tool": "check_calendar",
+        "success": false,
+        "syntactic": false
+      },
+      {
+        "step": 2,
+        "tool": "find_conflicts",
+        "success": false,
+        "syntactic": false
+      },
+      {
+        "step": 3,
+        "tool": "suggest_time",
+        "success": false,
+        "syntactic": false
+      },
+      {
+        "step": 4,
+        "tool": "create_event",
+        "success": false,
+        "syntactic": false
+      }
+    ]
+  },
+  {
+    "query": "Schedule a meeting for next at 3pm?",
+    "original": "Schedule a meeting for next Monday at 3pm",
+    "ptype": "missing_context",
+    "severity": "severe",
+    "chain": "chain_c",
+    "total_steps": 5,
+    "all_steps_successful": false,
+    "syntactic_success_rate": 0.2,
+    "cascade_failure": true,
+    "steps": [
+      {
+        "step": 0,
+        "tool": "parse_date",
+        "success": true,
+        "syntactic": true
+      },
+      {
+        "step": 1,
+        "tool": "check_calendar",
+        "success": false,
+        "syntactic": false
+      },
+      {
+        "step": 2,
+        "tool": "find_conflicts",
+        "success": false,
+        "syntactic": false
+      },
+      {
+        "step": 3,
+        "tool": "suggest_time",
+        "success": false,
+        "syntactic": false
+      },
+      {
+        "step": 4,
+        "tool": "create_event",
+        "success": false,
+        "syntactic": false
+      }
+    ]
+  },
+  {
+    "query": "Schedule a meeting for next Monday at 3pm",
+    "original": "Schedule a meeting for next Monday at 3pm",
+    "ptype": "ambiguity",
+    "severity": "moderate",
+    "chain": "chain_c",
+    "total_steps": 5,
+    "all_steps_successful": false,
+    "syntactic_success_rate": 0.2,
+    "cascade_failure": true,
+    "steps": [
+      {
+        "step": 0,
+        "tool": "parse_date",
+        "success": true,
+        "syntactic": true
+      },
+      {
+        "step": 1,
+        "tool": "check_calendar",
+        "success": false,
+        "syntactic": false
+      },
+      {
+        "step": 2,
+        "tool": "find_conflicts",
+        "success": false,
+        "syntactic": false
+      },
+      {
+        "step": 3,
+        "tool": "suggest_time",
+        "success": false,
+        "syntactic": false
+      },
+      {
+        "step": 4,
+        "tool": "create_event",
+        "success": false,
+        "syntactic": false
+      }
+    ]
+  },
+  {
+    "query": "Schedule a meeting for next Monday at 3pm",
+    "original": "Schedule a meeting for next Monday at 3pm",
+    "ptype": "ambiguity",
+    "severity": "severe",
+    "chain": "chain_c",
+    "total_steps": 5,
+    "all_steps_successful": false,
+    "syntactic_success_rate": 0.2,
+    "cascade_failure": true,
+    "steps": [
+      {
+        "step": 0,
+        "tool": "parse_date",
+        "success": true,
+        "syntactic": true
+      },
+      {
+        "step": 1,
+        "tool": "check_calendar",
+        "success": false,
+        "syntactic": false
+      },
+      {
+        "step": 2,
+        "tool": "find_conflicts",
+        "success": false,
+        "syntactic": false
+      },
+      {
+        "step": 3,
+        "tool": "suggest_time",
+        "success": false,
+        "syntactic": false
+      },
+      {
+        "step": 4,
+        "tool": "create_event",
+        "success": false,
+        "syntactic": false
+      }
+    ]
+  },
+  {
+    "query": "Schedule a meeting for next Monday at 3pm unless...?",
+    "original": "Schedule a meeting for next Monday at 3pm",
+    "ptype": "negation",
+    "severity": "moderate",
+    "chain": "chain_c",
+    "total_steps": 5,
+    "all_steps_successful": true,
+    "syntactic_success_rate": 1.0,
+    "cascade_failure": false,
+    "steps": [
+      {
+        "step": 0,
+        "tool": "parse_date",
+        "success": true,
+        "syntactic": true
+      },
+      {
+        "step": 1,
+        "tool": "check_calendar",
+        "success": true,
+        "syntactic": true
+      },
+      {
+        "step": 2,
+        "tool": "find_conflicts",
+        "success": true,
+        "syntactic": true
+      },
+      {
+        "step": 3,
+        "tool": "suggest_time",
+        "success": true,
+        "syntactic": true
+      },
+      {
+        "step": 4,
+        "tool": "create_event",
+        "success": true,
+        "syntactic": true
+      }
+    ]
+  },
+  {
+    "query": "Don't schedule a meeting for next Monday at 3pm",
+    "original": "Schedule a meeting for next Monday at 3pm",
+    "ptype": "negation",
+    "severity": "severe",
+    "chain": "chain_c",
+    "total_steps": 5,
+    "all_steps_successful": false,
+    "syntactic_success_rate": 0.0,
+    "cascade_failure": true,
+    "steps": [
+      {
+        "step": 0,
+        "tool": "parse_date",
+        "success": false,
+        "syntactic": false
+      },
+      {
+        "step": 1,
+        "tool": "check_calendar",
+        "success": false,
+        "syntactic": false
+      },
+      {
+        "step": 2,
+        "tool": "find_conflicts",
+        "success": false,
+        "syntactic": false
+      },
+      {
+        "step": 3,
+        "tool": "suggest_time",
+        "success": false,
+        "syntactic": false
+      },
+      {
+        "step": 4,
+        "tool": "create_event",
+        "success": false,
+        "syntactic": false
+      }
+    ]
+  },
+  {
+    "query": "Check my calendar for tomorrow and find a free time slot",
+    "original": "Check my calendar for tomorrow and find a free time slot",
+    "ptype": "clean",
+    "severity": "clean",
+    "chain": "chain_c",
+    "total_steps": 5,
+    "all_steps_successful": true,
+    "syntactic_success_rate": 1.0,
+    "cascade_failure": false,
+    "steps": [
+      {
+        "step": 0,
+        "tool": "parse_date",
+        "success": true,
+        "syntactic": true
+      },
+      {
+        "step": 1,
+        "tool": "check_calendar",
+        "success": true,
+        "syntactic": true
+      },
+      {
+        "step": 2,
+        "tool": "find_conflicts",
+        "success": true,
+        "syntactic": true
+      },
+      {
+        "step": 3,
+        "tool": "suggest_time",
+        "success": true,
+        "syntactic": true
+      },
+      {
+        "step": 4,
+        "tool": "create_event",
+        "success": true,
+        "syntactic": true
+      }
+    ]
+  },
+  {
+    "query": "Check my calendar for tomortow and finW a free tiKe slog",
+    "original": "Check my calendar for tomorrow and find a free time slot",
+    "ptype": "typo",
+    "severity": "moderate",
+    "chain": "chain_c",
+    "total_steps": 5,
+    "all_steps_successful": true,
+    "syntactic_success_rate": 1.0,
+    "cascade_failure": false,
+    "steps": [
+      {
+        "step": 0,
+        "tool": "parse_date",
+        "success": true,
+        "syntactic": true
+      },
+      {
+        "step": 1,
+        "tool": "check_calendar",
+        "success": true,
+        "syntactic": true
+      },
+      {
+        "step": 2,
+        "tool": "find_conflicts",
+        "success": true,
+        "syntactic": true
+      },
+      {
+        "step": 3,
+        "tool": "suggest_time",
+        "success": true,
+        "syntactic": true
+      },
+      {
+        "step": 4,
+        "tool": "create_event",
+        "success": true,
+        "syntactic": true
+      }
+    ]
+  },
+  {
+    "query": "Chdck my calendar for tomorrow and f9nd a f5ee gime slot",
+    "original": "Check my calendar for tomorrow and find a free time slot",
+    "ptype": "typo",
+    "severity": "severe",
+    "chain": "chain_c",
+    "total_steps": 5,
+    "all_steps_successful": true,
+    "syntactic_success_rate": 1.0,
+    "cascade_failure": false,
+    "steps": [
+      {
+        "step": 0,
+        "tool": "parse_date",
+        "success": true,
+        "syntactic": true
+      },
+      {
+        "step": 1,
+        "tool": "check_calendar",
+        "success": true,
+        "syntactic": true
+      },
+      {
+        "step": 2,
+        "tool": "find_conflicts",
+        "success": true,
+        "syntactic": true
+      },
+      {
+        "step": 3,
+        "tool": "suggest_time",
+        "success": true,
+        "syntactic": true
+      },
+      {
+        "step": 4,
+        "tool": "create_event",
+        "success": true,
+        "syntactic": true
+      }
+    ]
+  },
+  {
+    "query": "False",
+    "original": "Check my calendar for tomorrow and find a free time slot",
+    "ptype": "paraphrase",
+    "severity": "moderate",
+    "chain": "chain_c",
+    "total_steps": 5,
+    "all_steps_successful": true,
+    "syntactic_success_rate": 1.0,
+    "cascade_failure": false,
+    "steps": [
+      {
+        "step": 0,
+        "tool": "parse_date",
+        "success": true,
+        "syntactic": true
+      },
+      {
+        "step": 1,
+        "tool": "check_calendar",
+        "success": true,
+        "syntactic": true
+      },
+      {
+        "step": 2,
+        "tool": "find_conflicts",
+        "success": true,
+        "syntactic": true
+      },
+      {
+        "step": 3,
+        "tool": "suggest_time",
+        "success": true,
+        "syntactic": true
+      },
+      {
+        "step": 4,
+        "tool": "create_event",
+        "success": true,
+        "syntactic": true
+      }
+    ]
+  },
+  {
+    "query": "False",
+    "original": "Check my calendar for tomorrow and find a free time slot",
+    "ptype": "paraphrase",
+    "severity": "severe",
+    "chain": "chain_c",
+    "total_steps": 5,
+    "all_steps_successful": true,
+    "syntactic_success_rate": 1.0,
+    "cascade_failure": false,
+    "steps": [
+      {
+        "step": 0,
+        "tool": "parse_date",
+        "success": true,
+        "syntactic": true
+      },
+      {
+        "step": 1,
+        "tool": "check_calendar",
+        "success": true,
+        "syntactic": true
+      },
+      {
+        "step": 2,
+        "tool": "find_conflicts",
+        "success": true,
+        "syntactic": true
+      },
+      {
+        "step": 3,
+        "tool": "suggest_time",
+        "success": true,
+        "syntactic": true
+      },
+      {
+        "step": 4,
+        "tool": "create_event",
+        "success": true,
+        "syntactic": true
+      }
+    ]
+  },
+  {
+    "query": "Check my calendar for tomorrow and find a free time slot?",
+    "original": "Check my calendar for tomorrow and find a free time slot",
+    "ptype": "missing_context",
+    "severity": "moderate",
+    "chain": "chain_c",
+    "total_steps": 5,
+    "all_steps_successful": true,
+    "syntactic_success_rate": 1.0,
+    "cascade_failure": false,
+    "steps": [
+      {
+        "step": 0,
+        "tool": "parse_date",
+        "success": true,
+        "syntactic": true
+      },
+      {
+        "step": 1,
+        "tool": "check_calendar",
+        "success": true,
+        "syntactic": true
+      },
+      {
+        "step": 2,
+        "tool": "find_conflicts",
+        "success": true,
+        "syntactic": true
+      },
+      {
+        "step": 3,
+        "tool": "suggest_time",
+        "success": true,
+        "syntactic": true
+      },
+      {
+        "step": 4,
+        "tool": "create_event",
+        "success": true,
+        "syntactic": true
+      }
+    ]
+  },
+  {
+    "query": "Check my calendar for tomorrow and find a free time slot?",
+    "original": "Check my calendar for tomorrow and find a free time slot",
+    "ptype": "missing_context",
+    "severity": "severe",
+    "chain": "chain_c",
+    "total_steps": 5,
+    "all_steps_successful": true,
+    "syntactic_success_rate": 1.0,
+    "cascade_failure": false,
+    "steps": [
+      {
+        "step": 0,
+        "tool": "parse_date",
+        "success": true,
+        "syntactic": true
+      },
+      {
+        "step": 1,
+        "tool": "check_calendar",
+        "success": true,
+        "syntactic": true
+      },
+      {
+        "step": 2,
+        "tool": "find_conflicts",
+        "success": true,
+        "syntactic": true
+      },
+      {
+        "step": 3,
+        "tool": "suggest_time",
+        "success": true,
+        "syntactic": true
+      },
+      {
+        "step": 4,
+        "tool": "create_event",
+        "success": true,
+        "syntactic": true
+      }
+    ]
+  },
+  {
+    "query": "Check my calendar for tomorrow and find a free time slot",
+    "original": "Check my calendar for tomorrow and find a free time slot",
+    "ptype": "ambiguity",
+    "severity": "moderate",
+    "chain": "chain_c",
+    "total_steps": 5,
+    "all_steps_successful": true,
+    "syntactic_success_rate": 1.0,
+    "cascade_failure": false,
+    "steps": [
+      {
+        "step": 0,
+        "tool": "parse_date",
+        "success": true,
+        "syntactic": true
+      },
+      {
+        "step": 1,
+        "tool": "check_calendar",
+        "success": true,
+        "syntactic": true
+      },
+      {
+        "step": 2,
+        "tool": "find_conflicts",
+        "success": true,
+        "syntactic": true
+      },
+      {
+        "step": 3,
+        "tool": "suggest_time",
+        "success": true,
+        "syntactic": true
+      },
+      {
+        "step": 4,
+        "tool": "create_event",
+        "success": true,
+        "syntactic": true
+      }
+    ]
+  },
+  {
+    "query": "Check my calendar for tomorrow and find a free time slot",
+    "original": "Check my calendar for tomorrow and find a free time slot",
+    "ptype": "ambiguity",
+    "severity": "severe",
+    "chain": "chain_c",
+    "total_steps": 5,
+    "all_steps_successful": true,
+    "syntactic_success_rate": 1.0,
+    "cascade_failure": false,
+    "steps": [
+      {
+        "step": 0,
+        "tool": "parse_date",
+        "success": true,
+        "syntactic": true
+      },
+      {
+        "step": 1,
+        "tool": "check_calendar",
+        "success": true,
+        "syntactic": true
+      },
+      {
+        "step": 2,
+        "tool": "find_conflicts",
+        "success": true,
+        "syntactic": true
+      },
+      {
+        "step": 3,
+        "tool": "suggest_time",
+        "success": true,
+        "syntactic": true
+      },
+      {
+        "step": 4,
+        "tool": "create_event",
+        "success": true,
+        "syntactic": true
+      }
+    ]
+  },
+  {
+    "query": "Don't check my calendar for tomorrow and find a free time slot",
+    "original": "Check my calendar for tomorrow and find a free time slot",
+    "ptype": "negation",
+    "severity": "moderate",
+    "chain": "chain_c",
+    "total_steps": 5,
+    "all_steps_successful": true,
+    "syntactic_success_rate": 1.0,
+    "cascade_failure": false,
+    "steps": [
+      {
+        "step": 0,
+        "tool": "parse_date",
+        "success": true,
+        "syntactic": true
+      },
+      {
+        "step": 1,
+        "tool": "check_calendar",
+        "success": true,
+        "syntactic": true
+      },
+      {
+        "step": 2,
+        "tool": "find_conflicts",
+        "success": true,
+        "syntactic": true
+      },
+      {
+        "step": 3,
+        "tool": "suggest_time",
+        "success": true,
+        "syntactic": true
+      },
+      {
+        "step": 4,
+        "tool": "create_event",
+        "success": true,
+        "syntactic": true
+      }
+    ]
+  },
+  {
+    "query": "Don't check my calendar for tomorrow and find a free time slot",
+    "original": "Check my calendar for tomorrow and find a free time slot",
+    "ptype": "negation",
+    "severity": "severe",
+    "chain": "chain_c",
+    "total_steps": 5,
+    "all_steps_successful": true,
+    "syntactic_success_rate": 1.0,
+    "cascade_failure": false,
+    "steps": [
+      {
+        "step": 0,
+        "tool": "parse_date",
+        "success": true,
+        "syntactic": true
+      },
+      {
+        "step": 1,
+        "tool": "check_calendar",
+        "success": true,
+        "syntactic": true
+      },
+      {
+        "step": 2,
+        "tool": "find_conflicts",
+        "success": true,
+        "syntactic": true
+      },
+      {
+        "step": 3,
+        "tool": "suggest_time",
+        "success": true,
+        "syntactic": true
+      },
+      {
+        "step": 4,
+        "tool": "create_event",
+        "success": true,
+        "syntactic": true
+      }
+    ]
+  },
+  {
+    "query": "Create an event for next Friday at 10am",
+    "original": "Create an event for next Friday at 10am",
+    "ptype": "clean",
+    "severity": "clean",
+    "chain": "chain_c",
+    "total_steps": 5,
+    "all_steps_successful": true,
+    "syntactic_success_rate": 1.0,
+    "cascade_failure": false,
+    "steps": [
+      {
+        "step": 0,
+        "tool": "parse_date",
+        "success": true,
+        "syntactic": true
+      },
+      {
+        "step": 1,
+        "tool": "check_calendar",
+        "success": true,
+        "syntactic": true
+      },
+      {
+        "step": 2,
+        "tool": "find_conflicts",
+        "success": true,
+        "syntactic": true
+      },
+      {
+        "step": 3,
+        "tool": "suggest_time",
+        "success": true,
+        "syntactic": true
+      },
+      {
+        "step": 4,
+        "tool": "create_event",
+        "success": true,
+        "syntactic": true
+      }
+    ]
+  },
+  {
+    "query": "Create an evSnt for nest Frivay at 10am",
+    "original": "Create an event for next Friday at 10am",
+    "ptype": "typo",
+    "severity": "moderate",
+    "chain": "chain_c",
+    "total_steps": 5,
+    "all_steps_successful": false,
+    "syntactic_success_rate": 0.6,
+    "cascade_failure": true,
+    "steps": [
+      {
+        "step": 0,
+        "tool": "parse_date",
+        "success": true,
+        "syntactic": true
+      },
+      {
+        "step": 1,
+        "tool": "check_calendar",
+        "success": true,
+        "syntactic": true
+      },
+      {
+        "step": 2,
+        "tool": "find_conflicts",
+        "success": true,
+        "syntactic": true
+      },
+      {
+        "step": 3,
+        "tool": "suggest_time",
+        "success": false,
+        "syntactic": false
+      },
+      {
+        "step": 4,
+        "tool": "create_event",
+        "success": false,
+        "syntactic": false
+      }
+    ]
+  },
+  {
+    "query": "Crdate an event for Jext Friday at 10zm",
+    "original": "Create an event for next Friday at 10am",
+    "ptype": "typo",
+    "severity": "severe",
+    "chain": "chain_c",
+    "total_steps": 5,
+    "all_steps_successful": true,
+    "syntactic_success_rate": 1.0,
+    "cascade_failure": false,
+    "steps": [
+      {
+        "step": 0,
+        "tool": "parse_date",
+        "success": true,
+        "syntactic": true
+      },
+      {
+        "step": 1,
+        "tool": "check_calendar",
+        "success": true,
+        "syntactic": true
+      },
+      {
+        "step": 2,
+        "tool": "find_conflicts",
+        "success": true,
+        "syntactic": true
+      },
+      {
+        "step": 3,
+        "tool": "suggest_time",
+        "success": true,
+        "syntactic": true
+      },
+      {
+        "step": 4,
+        "tool": "create_event",
+        "success": true,
+        "syntactic": true
+      }
+    ]
+  },
+  {
+    "query": "False",
+    "original": "Create an event for next Friday at 10am",
+    "ptype": "paraphrase",
+    "severity": "moderate",
+    "chain": "chain_c",
+    "total_steps": 5,
+    "all_steps_successful": true,
+    "syntactic_success_rate": 1.0,
+    "cascade_failure": false,
+    "steps": [
+      {
+        "step": 0,
+        "tool": "parse_date",
+        "success": true,
+        "syntactic": true
+      },
+      {
+        "step": 1,
+        "tool": "check_calendar",
+        "success": true,
+        "syntactic": true
+      },
+      {
+        "step": 2,
+        "tool": "find_conflicts",
+        "success": true,
+        "syntactic": true
+      },
+      {
+        "step": 3,
+        "tool": "suggest_time",
+        "success": true,
+        "syntactic": true
+      },
+      {
+        "step": 4,
+        "tool": "create_event",
+        "success": true,
+        "syntactic": true
+      }
+    ]
+  },
+  {
+    "query": "False",
+    "original": "Create an event for next Friday at 10am",
+    "ptype": "paraphrase",
+    "severity": "severe",
+    "chain": "chain_c",
+    "total_steps": 5,
+    "all_steps_successful": true,
+    "syntactic_success_rate": 1.0,
+    "cascade_failure": false,
+    "steps": [
+      {
+        "step": 0,
+        "tool": "parse_date",
+        "success": true,
+        "syntactic": true
+      },
+      {
+        "step": 1,
+        "tool": "check_calendar",
+        "success": true,
+        "syntactic": true
+      },
+      {
+        "step": 2,
+        "tool": "find_conflicts",
+        "success": true,
+        "syntactic": true
+      },
+      {
+        "step": 3,
+        "tool": "suggest_time",
+        "success": true,
+        "syntactic": true
+      },
+      {
+        "step": 4,
+        "tool": "create_event",
+        "success": true,
+        "syntactic": true
+      }
+    ]
+  },
+  {
+    "query": "Create an event for next at 10am?",
+    "original": "Create an event for next Friday at 10am",
+    "ptype": "missing_context",
+    "severity": "moderate",
+    "chain": "chain_c",
+    "total_steps": 5,
+    "all_steps_successful": false,
+    "syntactic_success_rate": 0.2,
+    "cascade_failure": true,
+    "steps": [
+      {
+        "step": 0,
+        "tool": "parse_date",
+        "success": true,
+        "syntactic": true
+      },
+      {
+        "step": 1,
+        "tool": "check_calendar",
+        "success": false,
+        "syntactic": false
+      },
+      {
+        "step": 2,
+        "tool": "find_conflicts",
+        "success": false,
+        "syntactic": false
+      },
+      {
+        "step": 3,
+        "tool": "suggest_time",
+        "success": false,
+        "syntactic": false
+      },
+      {
+        "step": 4,
+        "tool": "create_event",
+        "success": false,
+        "syntactic": false
+      }
+    ]
+  },
+  {
+    "query": "Create an event for next at 10am?",
+    "original": "Create an event for next Friday at 10am",
+    "ptype": "missing_context",
+    "severity": "severe",
+    "chain": "chain_c",
+    "total_steps": 5,
+    "all_steps_successful": false,
+    "syntactic_success_rate": 0.2,
+    "cascade_failure": true,
+    "steps": [
+      {
+        "step": 0,
+        "tool": "parse_date",
+        "success": true,
+        "syntactic": true
+      },
+      {
+        "step": 1,
+        "tool": "check_calendar",
+        "success": false,
+        "syntactic": false
+      },
+      {
+        "step": 2,
+        "tool": "find_conflicts",
+        "success": false,
+        "syntactic": false
+      },
+      {
+        "step": 3,
+        "tool": "suggest_time",
+        "success": false,
+        "syntactic": false
+      },
+      {
+        "step": 4,
+        "tool": "create_event",
+        "success": false,
+        "syntactic": false
+      }
+    ]
+  },
+  {
+    "query": "Create an event for next Friday at 10am",
+    "original": "Create an event for next Friday at 10am",
+    "ptype": "ambiguity",
+    "severity": "moderate",
+    "chain": "chain_c",
+    "total_steps": 5,
+    "all_steps_successful": true,
+    "syntactic_success_rate": 1.0,
+    "cascade_failure": false,
+    "steps": [
+      {
+        "step": 0,
+        "tool": "parse_date",
+        "success": true,
+        "syntactic": true
+      },
+      {
+        "step": 1,
+        "tool": "check_calendar",
+        "success": true,
+        "syntactic": true
+      },
+      {
+        "step": 2,
+        "tool": "find_conflicts",
+        "success": true,
+        "syntactic": true
+      },
+      {
+        "step": 3,
+        "tool": "suggest_time",
+        "success": true,
+        "syntactic": true
+      },
+      {
+        "step": 4,
+        "tool": "create_event",
+        "success": true,
+        "syntactic": true
+      }
+    ]
+  },
+  {
+    "query": "Create an event for next Friday at 10am",
+    "original": "Create an event for next Friday at 10am",
+    "ptype": "ambiguity",
+    "severity": "severe",
+    "chain": "chain_c",
+    "total_steps": 5,
+    "all_steps_successful": true,
+    "syntactic_success_rate": 1.0,
+    "cascade_failure": false,
+    "steps": [
+      {
+        "step": 0,
+        "tool": "parse_date",
+        "success": true,
+        "syntactic": true
+      },
+      {
+        "step": 1,
+        "tool": "check_calendar",
+        "success": true,
+        "syntactic": true
+      },
+      {
+        "step": 2,
+        "tool": "find_conflicts",
+        "success": true,
+        "syntactic": true
+      },
+      {
+        "step": 3,
+        "tool": "suggest_time",
+        "success": true,
+        "syntactic": true
+      },
+      {
+        "step": 4,
+        "tool": "create_event",
+        "success": true,
+        "syntactic": true
+      }
+    ]
+  },
+  {
+    "query": "Create an event for next Friday at 10am unless...?",
+    "original": "Create an event for next Friday at 10am",
+    "ptype": "negation",
+    "severity": "moderate",
+    "chain": "chain_c",
+    "total_steps": 5,
+    "all_steps_successful": false,
+    "syntactic_success_rate": 0.2,
+    "cascade_failure": true,
+    "steps": [
+      {
+        "step": 0,
+        "tool": "parse_date",
+        "success": true,
+        "syntactic": true
+      },
+      {
+        "step": 1,
+        "tool": "check_calendar",
+        "success": false,
+        "syntactic": false
+      },
+      {
+        "step": 2,
+        "tool": "find_conflicts",
+        "success": false,
+        "syntactic": false
+      },
+      {
+        "step": 3,
+        "tool": "suggest_time",
+        "success": false,
+        "syntactic": false
+      },
+      {
+        "step": 4,
+        "tool": "create_event",
+        "success": false,
+        "syntactic": false
+      }
+    ]
+  },
+  {
+    "query": "Don't create an event for next Friday at 10am",
+    "original": "Create an event for next Friday at 10am",
+    "ptype": "negation",
+    "severity": "severe",
+    "chain": "chain_c",
+    "total_steps": 5,
+    "all_steps_successful": true,
+    "syntactic_success_rate": 1.0,
+    "cascade_failure": false,
+    "steps": [
+      {
+        "step": 0,
+        "tool": "parse_date",
+        "success": true,
+        "syntactic": true
+      },
+      {
+        "step": 1,
+        "tool": "check_calendar",
+        "success": true,
+        "syntactic": true
+      },
+      {
+        "step": 2,
+        "tool": "find_conflicts",
+        "success": true,
+        "syntactic": true
+      },
+      {
+        "step": 3,
+        "tool": "suggest_time",
+        "success": true,
+        "syntactic": true
+      },
+      {
+        "step": 4,
+        "tool": "create_event",
+        "success": true,
+        "syntactic": true
+      }
+    ]
+  },
+  {
+    "query": "Find conflicts if I schedule a 1-hour meeting tomorrow",
+    "original": "Find conflicts if I schedule a 1-hour meeting tomorrow",
+    "ptype": "clean",
+    "severity": "clean",
+    "chain": "chain_c",
+    "total_steps": 5,
+    "all_steps_successful": false,
+    "syntactic_success_rate": 0.2,
+    "cascade_failure": true,
+    "steps": [
+      {
+        "step": 0,
+        "tool": "parse_date",
+        "success": true,
+        "syntactic": true
+      },
+      {
+        "step": 1,
+        "tool": "check_calendar",
+        "success": false,
+        "syntactic": false
+      },
+      {
+        "step": 2,
+        "tool": "find_conflicts",
+        "success": false,
+        "syntactic": false
+      },
+      {
+        "step": 3,
+        "tool": "suggest_time",
+        "success": false,
+        "syntactic": false
+      },
+      {
+        "step": 4,
+        "tool": "create_event",
+        "success": false,
+        "syntactic": false
+      }
+    ]
+  },
+  {
+    "query": "Find fonflicts if I schrdule a 1 - hour meetiJg tPmorrow",
+    "original": "Find conflicts if I schedule a 1-hour meeting tomorrow",
+    "ptype": "typo",
+    "severity": "moderate",
+    "chain": "chain_c",
+    "total_steps": 5,
+    "all_steps_successful": false,
+    "syntactic_success_rate": 0.2,
+    "cascade_failure": true,
+    "steps": [
+      {
+        "step": 0,
+        "tool": "parse_date",
+        "success": true,
+        "syntactic": true
+      },
+      {
+        "step": 1,
+        "tool": "check_calendar",
+        "success": false,
+        "syntactic": false
+      },
+      {
+        "step": 2,
+        "tool": "find_conflicts",
+        "success": false,
+        "syntactic": false
+      },
+      {
+        "step": 3,
+        "tool": "suggest_time",
+        "success": false,
+        "syntactic": false
+      },
+      {
+        "step": 4,
+        "tool": "create_event",
+        "success": false,
+        "syntactic": false
+      }
+    ]
+  },
+  {
+    "query": "Find confliVts if I scherule a 1 - hour me$ting t)morrow",
+    "original": "Find conflicts if I schedule a 1-hour meeting tomorrow",
+    "ptype": "typo",
+    "severity": "severe",
+    "chain": "chain_c",
+    "total_steps": 5,
+    "all_steps_successful": false,
+    "syntactic_success_rate": 0.2,
+    "cascade_failure": true,
+    "steps": [
+      {
+        "step": 0,
+        "tool": "parse_date",
+        "success": true,
+        "syntactic": true
+      },
+      {
+        "step": 1,
+        "tool": "check_calendar",
+        "success": false,
+        "syntactic": false
+      },
+      {
+        "step": 2,
+        "tool": "find_conflicts",
+        "success": false,
+        "syntactic": false
+      },
+      {
+        "step": 3,
+        "tool": "suggest_time",
+        "success": false,
+        "syntactic": false
+      },
+      {
+        "step": 4,
+        "tool": "create_event",
+        "success": false,
+        "syntactic": false
+      }
+    ]
+  },
+  {
+    "query": "False",
+    "original": "Find conflicts if I schedule a 1-hour meeting tomorrow",
+    "ptype": "paraphrase",
+    "severity": "moderate",
+    "chain": "chain_c",
+    "total_steps": 5,
+    "all_steps_successful": true,
+    "syntactic_success_rate": 1.0,
+    "cascade_failure": false,
+    "steps": [
+      {
+        "step": 0,
+        "tool": "parse_date",
+        "success": true,
+        "syntactic": true
+      },
+      {
+        "step": 1,
+        "tool": "check_calendar",
+        "success": true,
+        "syntactic": true
+      },
+      {
+        "step": 2,
+        "tool": "find_conflicts",
+        "success": true,
+        "syntactic": true
+      },
+      {
+        "step": 3,
+        "tool": "suggest_time",
+        "success": true,
+        "syntactic": true
+      },
+      {
+        "step": 4,
+        "tool": "create_event",
+        "success": true,
+        "syntactic": true
+      }
+    ]
+  },
+  {
+    "query": "False",
+    "original": "Find conflicts if I schedule a 1-hour meeting tomorrow",
+    "ptype": "paraphrase",
+    "severity": "severe",
+    "chain": "chain_c",
+    "total_steps": 5,
+    "all_steps_successful": true,
+    "syntactic_success_rate": 1.0,
+    "cascade_failure": false,
+    "steps": [
+      {
+        "step": 0,
+        "tool": "parse_date",
+        "success": true,
+        "syntactic": true
+      },
+      {
+        "step": 1,
+        "tool": "check_calendar",
+        "success": true,
+        "syntactic": true
+      },
+      {
+        "step": 2,
+        "tool": "find_conflicts",
+        "success": true,
+        "syntactic": true
+      },
+      {
+        "step": 3,
+        "tool": "suggest_time",
+        "success": true,
+        "syntactic": true
+      },
+      {
+        "step": 4,
+        "tool": "create_event",
+        "success": true,
+        "syntactic": true
+      }
+    ]
+  },
+  {
+    "query": "Find conflicts if schedule a 1-hour meeting tomorrow?",
+    "original": "Find conflicts if I schedule a 1-hour meeting tomorrow",
+    "ptype": "missing_context",
+    "severity": "moderate",
+    "chain": "chain_c",
+    "total_steps": 5,
+    "all_steps_successful": false,
+    "syntactic_success_rate": 0.0,
+    "cascade_failure": true,
+    "steps": [
+      {
+        "step": 0,
+        "tool": "parse_date",
+        "success": false,
+        "syntactic": false
+      },
+      {
+        "step": 1,
+        "tool": "check_calendar",
+        "success": false,
+        "syntactic": false
+      },
+      {
+        "step": 2,
+        "tool": "find_conflicts",
+        "success": false,
+        "syntactic": false
+      },
+      {
+        "step": 3,
+        "tool": "suggest_time",
+        "success": false,
+        "syntactic": false
+      },
+      {
+        "step": 4,
+        "tool": "create_event",
+        "success": false,
+        "syntactic": false
+      }
+    ]
+  },
+  {
+    "query": "Find conflicts if schedule a 1-hour meeting tomorrow?",
+    "original": "Find conflicts if I schedule a 1-hour meeting tomorrow",
+    "ptype": "missing_context",
+    "severity": "severe",
+    "chain": "chain_c",
+    "total_steps": 5,
+    "all_steps_successful": false,
+    "syntactic_success_rate": 0.0,
+    "cascade_failure": true,
+    "steps": [
+      {
+        "step": 0,
+        "tool": "parse_date",
+        "success": false,
+        "syntactic": false
+      },
+      {
+        "step": 1,
+        "tool": "check_calendar",
+        "success": false,
+        "syntactic": false
+      },
+      {
+        "step": 2,
+        "tool": "find_conflicts",
+        "success": false,
+        "syntactic": false
+      },
+      {
+        "step": 3,
+        "tool": "suggest_time",
+        "success": false,
+        "syntactic": false
+      },
+      {
+        "step": 4,
+        "tool": "create_event",
+        "success": false,
+        "syntactic": false
+      }
+    ]
+  },
+  {
+    "query": "Find conflicts if I schedule a 1-hour meeting tomorrow",
+    "original": "Find conflicts if I schedule a 1-hour meeting tomorrow",
+    "ptype": "ambiguity",
+    "severity": "moderate",
+    "chain": "chain_c",
+    "total_steps": 5,
+    "all_steps_successful": false,
+    "syntactic_success_rate": 0.2,
+    "cascade_failure": true,
+    "steps": [
+      {
+        "step": 0,
+        "tool": "parse_date",
+        "success": true,
+        "syntactic": true
+      },
+      {
+        "step": 1,
+        "tool": "check_calendar",
+        "success": false,
+        "syntactic": false
+      },
+      {
+        "step": 2,
+        "tool": "find_conflicts",
+        "success": false,
+        "syntactic": false
+      },
+      {
+        "step": 3,
+        "tool": "suggest_time",
+        "success": false,
+        "syntactic": false
+      },
+      {
+        "step": 4,
+        "tool": "create_event",
+        "success": false,
+        "syntactic": false
+      }
+    ]
+  },
+  {
+    "query": "Find conflicts if I schedule a 1-hour meeting tomorrow",
+    "original": "Find conflicts if I schedule a 1-hour meeting tomorrow",
+    "ptype": "ambiguity",
+    "severity": "severe",
+    "chain": "chain_c",
+    "total_steps": 5,
+    "all_steps_successful": false,
+    "syntactic_success_rate": 0.2,
+    "cascade_failure": true,
+    "steps": [
+      {
+        "step": 0,
+        "tool": "parse_date",
+        "success": true,
+        "syntactic": true
+      },
+      {
+        "step": 1,
+        "tool": "check_calendar",
+        "success": false,
+        "syntactic": false
+      },
+      {
+        "step": 2,
+        "tool": "find_conflicts",
+        "success": false,
+        "syntactic": false
+      },
+      {
+        "step": 3,
+        "tool": "suggest_time",
+        "success": false,
+        "syntactic": false
+      },
+      {
+        "step": 4,
+        "tool": "create_event",
+        "success": false,
+        "syntactic": false
+      }
+    ]
+  },
+  {
+    "query": "Find conflicts if I schedule a 1-hour meeting tomorrow unless...?",
+    "original": "Find conflicts if I schedule a 1-hour meeting tomorrow",
+    "ptype": "negation",
+    "severity": "moderate",
+    "chain": "chain_c",
+    "total_steps": 5,
+    "all_steps_successful": true,
+    "syntactic_success_rate": 1.0,
+    "cascade_failure": false,
+    "steps": [
+      {
+        "step": 0,
+        "tool": "parse_date",
+        "success": true,
+        "syntactic": true
+      },
+      {
+        "step": 1,
+        "tool": "check_calendar",
+        "success": true,
+        "syntactic": true
+      },
+      {
+        "step": 2,
+        "tool": "find_conflicts",
+        "success": true,
+        "syntactic": true
+      },
+      {
+        "step": 3,
+        "tool": "suggest_time",
+        "success": true,
+        "syntactic": true
+      },
+      {
+        "step": 4,
+        "tool": "create_event",
+        "success": true,
+        "syntactic": true
+      }
+    ]
+  },
+  {
+    "query": "Don't find conflicts if I schedule a 1-hour meeting tomorrow",
+    "original": "Find conflicts if I schedule a 1-hour meeting tomorrow",
+    "ptype": "negation",
+    "severity": "severe",
+    "chain": "chain_c",
+    "total_steps": 5,
+    "all_steps_successful": false,
+    "syntactic_success_rate": 0.0,
+    "cascade_failure": true,
+    "steps": [
+      {
+        "step": 0,
+        "tool": "parse_date",
+        "success": false,
+        "syntactic": false
+      },
+      {
+        "step": 1,
+        "tool": "check_calendar",
+        "success": false,
+        "syntactic": false
+      },
+      {
+        "step": 2,
+        "tool": "find_conflicts",
+        "success": false,
+        "syntactic": false
+      },
+      {
+        "step": 3,
+        "tool": "suggest_time",
+        "success": false,
+        "syntactic": false
+      },
+      {
+        "step": 4,
+        "tool": "create_event",
+        "success": false,
+        "syntactic": false
+      }
+    ]
+  },
+  {
+    "query": "Suggest a time for a 30-minute call next week",
+    "original": "Suggest a time for a 30-minute call next week",
+    "ptype": "clean",
+    "severity": "clean",
+    "chain": "chain_c",
+    "total_steps": 5,
+    "all_steps_successful": false,
+    "syntactic_success_rate": 0.0,
+    "cascade_failure": true,
+    "steps": [
+      {
+        "step": 0,
+        "tool": "parse_date",
+        "success": false,
+        "syntactic": false
+      },
+      {
+        "step": 1,
+        "tool": "check_calendar",
+        "success": false,
+        "syntactic": false
+      },
+      {
+        "step": 2,
+        "tool": "find_conflicts",
+        "success": false,
+        "syntactic": false
+      },
+      {
+        "step": 3,
+        "tool": "suggest_time",
+        "success": false,
+        "syntactic": false
+      },
+      {
+        "step": 4,
+        "tool": "create_event",
+        "success": false,
+        "syntactic": false
+      }
+    ]
+  },
+  {
+    "query": "SuTgest a time for a 30 - minuhe cal? nexy week",
+    "original": "Suggest a time for a 30-minute call next week",
+    "ptype": "typo",
+    "severity": "moderate",
+    "chain": "chain_c",
+    "total_steps": 5,
+    "all_steps_successful": false,
+    "syntactic_success_rate": 0.0,
+    "cascade_failure": true,
+    "steps": [
+      {
+        "step": 0,
+        "tool": "parse_date",
+        "success": false,
+        "syntactic": false
+      },
+      {
+        "step": 1,
+        "tool": "check_calendar",
+        "success": false,
+        "syntactic": false
+      },
+      {
+        "step": 2,
+        "tool": "find_conflicts",
+        "success": false,
+        "syntactic": false
+      },
+      {
+        "step": 3,
+        "tool": "suggest_time",
+        "success": false,
+        "syntactic": false
+      },
+      {
+        "step": 4,
+        "tool": "create_event",
+        "success": false,
+        "syntactic": false
+      }
+    ]
+  },
+  {
+    "query": "SuggeEt a t(me for a 30 - minute caOl nexF week",
+    "original": "Suggest a time for a 30-minute call next week",
+    "ptype": "typo",
+    "severity": "severe",
+    "chain": "chain_c",
+    "total_steps": 5,
+    "all_steps_successful": false,
+    "syntactic_success_rate": 0.2,
+    "cascade_failure": true,
+    "steps": [
+      {
+        "step": 0,
+        "tool": "parse_date",
+        "success": true,
+        "syntactic": true
+      },
+      {
+        "step": 1,
+        "tool": "check_calendar",
+        "success": false,
+        "syntactic": false
+      },
+      {
+        "step": 2,
+        "tool": "find_conflicts",
+        "success": false,
+        "syntactic": false
+      },
+      {
+        "step": 3,
+        "tool": "suggest_time",
+        "success": false,
+        "syntactic": false
+      },
+      {
+        "step": 4,
+        "tool": "create_event",
+        "success": false,
+        "syntactic": false
+      }
+    ]
+  },
+  {
+    "query": "False",
+    "original": "Suggest a time for a 30-minute call next week",
+    "ptype": "paraphrase",
+    "severity": "moderate",
+    "chain": "chain_c",
+    "total_steps": 5,
+    "all_steps_successful": true,
+    "syntactic_success_rate": 1.0,
+    "cascade_failure": false,
+    "steps": [
+      {
+        "step": 0,
+        "tool": "parse_date",
+        "success": true,
+        "syntactic": true
+      },
+      {
+        "step": 1,
+        "tool": "check_calendar",
+        "success": true,
+        "syntactic": true
+      },
+      {
+        "step": 2,
+        "tool": "find_conflicts",
+        "success": true,
+        "syntactic": true
+      },
+      {
+        "step": 3,
+        "tool": "suggest_time",
+        "success": true,
+        "syntactic": true
+      },
+      {
+        "step": 4,
+        "tool": "create_event",
+        "success": true,
+        "syntactic": true
+      }
+    ]
+  },
+  {
+    "query": "False",
+    "original": "Suggest a time for a 30-minute call next week",
+    "ptype": "paraphrase",
+    "severity": "severe",
+    "chain": "chain_c",
+    "total_steps": 5,
+    "all_steps_successful": true,
+    "syntactic_success_rate": 1.0,
+    "cascade_failure": false,
+    "steps": [
+      {
+        "step": 0,
+        "tool": "parse_date",
+        "success": true,
+        "syntactic": true
+      },
+      {
+        "step": 1,
+        "tool": "check_calendar",
+        "success": true,
+        "syntactic": true
+      },
+      {
+        "step": 2,
+        "tool": "find_conflicts",
+        "success": true,
+        "syntactic": true
+      },
+      {
+        "step": 3,
+        "tool": "suggest_time",
+        "success": true,
+        "syntactic": true
+      },
+      {
+        "step": 4,
+        "tool": "create_event",
+        "success": true,
+        "syntactic": true
+      }
+    ]
+  },
+  {
+    "query": "Suggest a time for a 30-minute call next week?",
+    "original": "Suggest a time for a 30-minute call next week",
+    "ptype": "missing_context",
+    "severity": "moderate",
+    "chain": "chain_c",
+    "total_steps": 5,
+    "all_steps_successful": false,
+    "syntactic_success_rate": 0.0,
+    "cascade_failure": true,
+    "steps": [
+      {
+        "step": 0,
+        "tool": "parse_date",
+        "success": false,
+        "syntactic": false
+      },
+      {
+        "step": 1,
+        "tool": "check_calendar",
+        "success": false,
+        "syntactic": false
+      },
+      {
+        "step": 2,
+        "tool": "find_conflicts",
+        "success": false,
+        "syntactic": false
+      },
+      {
+        "step": 3,
+        "tool": "suggest_time",
+        "success": false,
+        "syntactic": false
+      },
+      {
+        "step": 4,
+        "tool": "create_event",
+        "success": false,
+        "syntactic": false
+      }
+    ]
+  },
+  {
+    "query": "Suggest a time for a 30-minute call next week?",
+    "original": "Suggest a time for a 30-minute call next week",
+    "ptype": "missing_context",
+    "severity": "severe",
+    "chain": "chain_c",
+    "total_steps": 5,
+    "all_steps_successful": false,
+    "syntactic_success_rate": 0.0,
+    "cascade_failure": true,
+    "steps": [
+      {
+        "step": 0,
+        "tool": "parse_date",
+        "success": false,
+        "syntactic": false
+      },
+      {
+        "step": 1,
+        "tool": "check_calendar",
+        "success": false,
+        "syntactic": false
+      },
+      {
+        "step": 2,
+        "tool": "find_conflicts",
+        "success": false,
+        "syntactic": false
+      },
+      {
+        "step": 3,
+        "tool": "suggest_time",
+        "success": false,
+        "syntactic": false
+      },
+      {
+        "step": 4,
+        "tool": "create_event",
+        "success": false,
+        "syntactic": false
+      }
+    ]
+  },
+  {
+    "query": "Suggest a time for a 30-minute call next week",
+    "original": "Suggest a time for a 30-minute call next week",
+    "ptype": "ambiguity",
+    "severity": "moderate",
+    "chain": "chain_c",
+    "total_steps": 5,
+    "all_steps_successful": false,
+    "syntactic_success_rate": 0.0,
+    "cascade_failure": true,
+    "steps": [
+      {
+        "step": 0,
+        "tool": "parse_date",
+        "success": false,
+        "syntactic": false
+      },
+      {
+        "step": 1,
+        "tool": "check_calendar",
+        "success": false,
+        "syntactic": false
+      },
+      {
+        "step": 2,
+        "tool": "find_conflicts",
+        "success": false,
+        "syntactic": false
+      },
+      {
+        "step": 3,
+        "tool": "suggest_time",
+        "success": false,
+        "syntactic": false
+      },
+      {
+        "step": 4,
+        "tool": "create_event",
+        "success": false,
+        "syntactic": false
+      }
+    ]
+  },
+  {
+    "query": "Suggest a time for a 30-minute call next week",
+    "original": "Suggest a time for a 30-minute call next week",
+    "ptype": "ambiguity",
+    "severity": "severe",
+    "chain": "chain_c",
+    "total_steps": 5,
+    "all_steps_successful": false,
+    "syntactic_success_rate": 0.0,
+    "cascade_failure": true,
+    "steps": [
+      {
+        "step": 0,
+        "tool": "parse_date",
+        "success": false,
+        "syntactic": false
+      },
+      {
+        "step": 1,
+        "tool": "check_calendar",
+        "success": false,
+        "syntactic": false
+      },
+      {
+        "step": 2,
+        "tool": "find_conflicts",
+        "success": false,
+        "syntactic": false
+      },
+      {
+        "step": 3,
+        "tool": "suggest_time",
+        "success": false,
+        "syntactic": false
+      },
+      {
+        "step": 4,
+        "tool": "create_event",
+        "success": false,
+        "syntactic": false
+      }
+    ]
+  },
+  {
+    "query": "Suggest a time for a 30-minute call next week unless...?",
+    "original": "Suggest a time for a 30-minute call next week",
+    "ptype": "negation",
+    "severity": "moderate",
+    "chain": "chain_c",
+    "total_steps": 5,
+    "all_steps_successful": false,
+    "syntactic_success_rate": 0.0,
+    "cascade_failure": true,
+    "steps": [
+      {
+        "step": 0,
+        "tool": "parse_date",
+        "success": false,
+        "syntactic": false
+      },
+      {
+        "step": 1,
+        "tool": "check_calendar",
+        "success": false,
+        "syntactic": false
+      },
+      {
+        "step": 2,
+        "tool": "find_conflicts",
+        "success": false,
+        "syntactic": false
+      },
+      {
+        "step": 3,
+        "tool": "suggest_time",
+        "success": false,
+        "syntactic": false
+      },
+      {
+        "step": 4,
+        "tool": "create_event",
+        "success": false,
+        "syntactic": false
+      }
+    ]
+  },
+  {
+    "query": "Don't suggest a time for a 30-minute call next week",
+    "original": "Suggest a time for a 30-minute call next week",
+    "ptype": "negation",
+    "severity": "severe",
+    "chain": "chain_c",
+    "total_steps": 5,
+    "all_steps_successful": true,
+    "syntactic_success_rate": 1.0,
+    "cascade_failure": false,
+    "steps": [
+      {
+        "step": 0,
+        "tool": "parse_date",
+        "success": true,
+        "syntactic": true
+      },
+      {
+        "step": 1,
+        "tool": "check_calendar",
+        "success": true,
+        "syntactic": true
+      },
+      {
+        "step": 2,
+        "tool": "find_conflicts",
+        "success": true,
+        "syntactic": true
+      },
+      {
+        "step": 3,
+        "tool": "suggest_time",
+        "success": true,
+        "syntactic": true
+      },
+      {
+        "step": 4,
+        "tool": "create_event",
+        "success": true,
+        "syntactic": true
+      }
+    ]
+  }
+]

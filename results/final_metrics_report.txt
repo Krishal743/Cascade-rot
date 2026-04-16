@@ -1,0 +1,97 @@
+================================================================================
+FINAL METRICS REPORT - CASCADE FAILURE IN LLM TOOL CHAINS
+================================================================================
+
+================================================================================
+CHAIN A (2-STEP): THREE MODEL COMPARISON
+================================================================================
+
+--- QWEN ---
+Total Instances: 110
+Syntactic SSR: 100.0% (110/110)
+Semantic SSR: 12.7% (14/110)
+Silent Failures: 87.3% (96/110)
+Semantic Cascade Rate: 87.3% (96/110)
+Traditional CFR: 0.0% (0/110)
+Complete Success: 12.7% (14/110)
+
+--- LLAMA ---
+Total Instances: 110
+Syntactic SSR: 100.0% (110/110)
+Semantic SSR: 13.6% (15/110)
+Silent Failures: 86.4% (95/110)
+Semantic Cascade Rate: 86.4% (95/110)
+Traditional CFR: 0.0% (0/110)
+Complete Success: 13.6% (15/110)
+
+--- PHI3 ---
+Total Instances: 110
+Syntactic SSR: 2.7% (3/110)
+Semantic SSR: 0.0% (0/110)
+Silent Failures: 2.7% (3/110)
+Semantic Cascade Rate: 0.0% (0/110)
+Traditional CFR: 100.0% (110/110)
+Complete Success: 0.0% (0/110)
+
+--- FAILURE MODE DISTRIBUTION ---
+QWEN:
+  Success: 12.7%
+  Silent Corruption: 87.3%
+  Hard Failure: 0.0%
+LLAMA:
+  Success: 13.6%
+  Silent Corruption: 86.4%
+  Hard Failure: 0.0%
+PHI3:
+  Success: 0.0%
+  Silent Corruption: 2.7%
+  Hard Failure: 97.3%
+
+================================================================================
+CHAIN B/C (MULTI-STEP): CASCADE BY CHAIN LENGTH
+================================================================================
+
+--- CHAIN_B ---
+Steps: 3
+E2E Success Rate: 0.0%
+Cascade Failure Rate: 100.0%
+Step-by-Step Success:
+  step_1: 85.5% (47/55)
+  step_2: 3.6% (2/55)
+  step_3: 3.6% (2/55)
+
+--- CHAIN_C ---
+Steps: 5
+E2E Success Rate: 50.9%
+Cascade Failure Rate: 49.1%
+Step-by-Step Success:
+  step_1: 80.0% (44/55)
+  step_2: 52.7% (29/55)
+  step_3: 52.7% (29/55)
+  step_4: 50.9% (28/55)
+  step_5: 50.9% (28/55)
+
+================================================================================
+STATISTICAL TESTS
+================================================================================
+
+Welch's ANOVA (Semantic Cascade across models):
+  F-statistic: 359.0426146623339
+  p-value: 3.1423389202678004e-83
+  Significant: True
+
+Effect Size (Eta-squared):
+  η² = 0.6871
+  Interpretation: large
+
+================================================================================
+SUMMARY TABLE
+================================================================================
+
+Model           Chain      SynSSR     SemSSR     SCR        CFR       
+-----------------------------------------------------------------
+QWEN            A (2-step) 100.0      12.7       87.3       0.0       
+LLAMA           A (2-step) 100.0      13.6       86.4       0.0       
+PHI3            A (2-step) 2.7        0.0        0.0        100.0     
+QWEN            B (3-step) 85.5       N/A        N/A        100.0     
+QWEN            C (5-step) 80.0       N/A        N/A        49.1      

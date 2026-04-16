@@ -1,0 +1,568 @@
+CASCADE FAILURE IN MULTI-
+STEP
+TOOL-USE CHAINS
+Robustness of Open-Source LLMs Under Prompt Perturbation
+LLM Implementation Guide — Build From Scratch
+A step-by-step instruction document for an LLM agent to reproduce this research project entirely
+using free, open-source resources.
+1. Project Overview
+This document is a complete implementation guide for a research project studying how prompt-
+level perturbations cause cascade failures in multi-step LLM tool-use pipelines. It is written as a
+direct instruction to an LLM agent tasked with building the full system from scratch.
+1.1 The Core Research Question
+When a user query is noisy, ambiguous, or malformed — and it triggers a chain of tool calls
+where each step depends on the previous step's output — how does failure propagate? Does
+step 2 silently hallucinate parameters from a broken step 1 output, or does it hard-fail? Can
+modern small open-source models (7–8B parameters) detect and recover from upstream errors
+in a chain?
+1.2 Why This Matters
+• Production deployments increasingly use LLMs as agents that chain tool calls (search →
+filter → summarize).
+• All existing robustness benchmarks (especially RoTBench, 2024) evaluate only single-
+turn tool selection under schema-level noise.
+• No study has characterized how errors propagate across a multi-step agentic pipeline
+under realistic prompt perturbations.
+• Small open-source models (Llama-3.1-8B, Mistral-7B, Qwen2.5-7B) are the actual
+deployment targets at the edge — not GPT-4.
+1.3 One-Sentence Contribution
+Contribution: This paper provides the first systematic study of cascade failure propagation
+in multi-step tool-use chains under prompt-level perturbation, evaluated on modern sub-10B
+open-source models with programmatic, judge-free evaluation.
+2. Novelty Map — What to Avoid and What Gaps to Fill
+2.1 Prior Work You Must Cite and Differentiate From
+Paper What it does / What it does NOT do
+RoTBench (2024) Ye et al.,
+EMNLP
+Perturbs tool and parameter NAMES in the schema. Tests
+tool selection, param ID, content filling — but only for
+single-turn (round 1). Their own limitation: 'our primary
+focus is on assessing LLMs in a single tool-use round.'
+Uses ToolLLaMA-7B, NexusRaven-13B, GPT-3.5/4. Does
+NOT study multi-step chains or prompt-side perturbations.
+ToolScan (2024)
+arXiv:2411.13547
+Taxonomy of error types in tool-use LLMs. Does NOT inject
+perturbations or measure robustness under noise.
+MetaTool (2023)
+arXiv:2310.03128
+Studies whether models decide to use tools at all. Not
+about robustness — zero overlap with your work.
+2509.26553 (2025) Multi-step function calling with contamination-free eval
+methodology. Focuses on evaluation design, NOT on
+robustness or perturbation.
+BigCodeBench (2024)
+arXiv:2406.15877
+Code generation with diverse function calls. Code domain
+only. No perturbation or robustness angle.
+CallNavi (2024) EASE Function call routing study. Not about perturbation
+robustness.
+2.2 The Five Gaps You Fill
+G1
+Multi-step cascade failure (your primary contribution)
+RoTBench only tests round 1. You test what happens when step 1 produces a degraded
+output and step 2 must consume it. Does the error silently propagate, amplify, or get
+corrected?
+G2 Prompt-side perturbations (not schema-side)
+RoTBench perturbs tool/parameter names in the schema definition. You perturb the USER
+QUERY (typos, ambiguity, missing context, paraphrasing). This is the realistic failure mode.
+G3 Modern small open-source models
+RoTBench uses 2023-era specialist models. You use Llama-3.1-8B-Instruct, Mistral-7B-
+Instruct-v0.3, Qwen2.5-7B-Instruct — models with native structured JSON function calling.
+G4
+Structured JSON output validity
+RoTBench measures tool selection and parameter naming. You additionally measure
+whether the final JSON output is schema-valid — a prerequisite for downstream tool
+execution.
+G5 Judge-free programmatic evaluation
+No paid LLM judge required. All metrics are binary and computable: JSON parses or not,
+required fields present or absent, schema types match or not.
+2.3 What NOT to Do (Protect Your Novelty)
+AVOID: Do NOT perturb tool/parameter names in the schema — that is RoTBench's exact
+contribution. Your perturbations must be on the user query side only.
+AVOID: Do NOT evaluate only the first tool call. If your experiment reduces to single-turn
+evaluation, you have reproduced RoTBench, not extended it.
+AVOID: Do NOT use GPT-4 or Claude as an evaluation judge. Besides the cost, it is a
+methodological vulnerability reviewers will attack. Every metric must be programmatic.
+AVOID: Do NOT use ToolLLaMA or NexusRaven as your test models — they are already in
+RoTBench. Use Llama-3.1-8B, Mistral-7B-v0.3, Qwen2.5-7B.
+AVOID: Do NOT attempt RL training or fine-tuning — it requires compute you don't have
+and is not your contribution. Your contribution is the benchmark and characterisation study.
+3. Technical Design
+3.1 Experimental Variables
+Variable Values
+Models (3) Llama-3.1-8B-Instruct, Mistral-7B-Instruct-v0.3, Qwen2.5-
+7B-Instruct
+Chain lengths (3) 2-step, 3-step, 5-step tool chains
+Perturbation types (5) Typos, paraphrasing, missing context, ambiguity injection,
+negation flip
+Perturbation severity (3) Clean (baseline), Moderate, Severe
+Tool domains (3) Weather+calendar, search+summarise,
+calculator+formatter
+Metrics (4) Step success rate, cascade failure rate, schema validity,
+recovery rate
+3.2 Perturbation Taxonomy
+All perturbations are applied to the USER QUERY only — never to the tool schema. This is
+what separates your work from RoTBench.
+Perturbation Type Example (original → perturbed)
+Typo injection "What is the weather in London?" → "Waht is the wheather
+in Londn?"
+Paraphrasing "Book a meeting for 3pm" → "Set up a call in the afternoon"
+Missing context "Find the weather then check if I have meetings" → "Check
+my schedule for it"
+Ambiguity injection "Paris" → "the capital" (without country context)
+Negation flip "Schedule a meeting on Monday" → "Don't schedule
+anything on Monday unless..."
+3.3 Chain Design
+A chain is a sequence of tool calls where each call may depend on the output of the previous
+call. Design three domain chains:
+• Chain A (2-step): get_weather(location) → should_bring_umbrella(weather_data)
+• Chain B (3-step): web_search(query) → extract_facts(search_results) →
+summarize(facts)
+• Chain C (5-step): parse_date(string) → check_calendar(date) → find_conflicts(events)
+→ suggest_time(conflicts) → create_event(time)
+Design Rule: Each tool must accept structured JSON input and produce structured JSON
+output. Define all schemas upfront as Python TypedDicts before writing any experimental
+code.
+3.4 Evaluation Metrics
+Metric Definition and computation
+Step Success Rate (SSR) For each step i in a chain, SSR_i = fraction of queries
+where step i produced valid, schema-compliant output.
+Compute per-step and aggregate.
+Cascade Failure Rate (CFR) CFR = fraction of chains where a failure at step i caused
+failure at step i+1 (conditional on step i failing). This is your
+primary novel metric.
+Schema Validity Score (SVS) Binary: does the output JSON parse? Does it contain all
+required fields? Are field types correct? All three must be
+true for SVS=1.
+Recovery Rate (RR) Fraction of chains where the model produced a valid final
+output despite at least one intermediate step failing.
+Measures self-correction capacity.
+Perturbation Sensitivity (PS) Drop in SSR_1 (first step) from Clean to Moderate to
+Severe, per perturbation type. Identifies which perturbation
+types break tool selection most.
+4. Step-by-Step Build Instructions
+These instructions are written for an LLM agent executing them sequentially. Complete each
+step fully before proceeding to the next. All tools used are free and open-source.
+Phase 1 — Environment Setup
+1.1 Install system dependencies
+Run the following in your terminal or Colab cell:
+# Python 3.10+ required
+pip install transformers accelerate bitsandbytes torch --break-system-packages
+pip install ollama langchain-core jsonschema textattack nlpaug --break-system-
+packages
+pip install pandas numpy scipy matplotlib seaborn --break-system-packages
+pip install pytest datasets huggingface_hub --break-system-packages
+1.2 Install and start Ollama (local model serving)
+Ollama allows you to run Llama-3.1-8B, Mistral-7B, and Qwen2.5-7B locally with JSON-
+mode support:
+# Linux/Mac:
+curl -fsSL https://ollama.ai/install.sh | sh
+# Pull the three models:
+ollama pull llama3.1:8b
+ollama pull mistral:7b-instruct-v0.3
+ollama pull qwen2.5:7b-instruct
+Colab Note: If running on Google Colab free tier, install Ollama via shell and use a T4
+GPU. Each 7-8B model in 4-bit quantisation requires ~5GB VRAM, within T4 limits. Use
+bitsandbytes for quantisation.
+1.3 Verify JSON/function-calling mode works
+Before writing any experiment code, confirm each model can produce valid structured
+JSON:
+import ollama
+response = ollama.chat(
+model='llama3.1:8b',
+messages=[{'role': 'user', 'content': 'Return JSON: {"city": "London"}'}],
+format='json'
+)
+import json
+parsed = json.loads(response['message']['content'])
+assert 'city' in parsed, 'JSON mode not working'
+STOP: Do not proceed to Phase 2 until all three models pass this check. If a model fails,
+check the Ollama version and model pull.
+Phase 2 — Tool Schema and Chain Definition
+2.1 Create tools/schemas.py — all tool definitions
+Define every tool as a Python TypedDict for input/output and as an OpenAI-compatible
+function schema for the model prompt. Example for Chain A:
+# tools/schemas.py
+from typing import TypedDict, Optional
+class WeatherInput(TypedDict):
+location: str # required
+unit: Optional[str] # 'celsius' or 'fahrenheit', default celsius
+class WeatherOutput(TypedDict):
+location: str
+temperature: float
+condition: str # 'sunny', 'rainy', 'cloudy', etc.
+humidity: float
+WEATHER_SCHEMA = {
+'name': 'get_weather',
+'description': 'Fetch current weather for a location.',
+'parameters': {
+'type': 'object',
+'properties': {
+'location': {'type': 'string', 'description': 'City name'},
+'unit': {'type': 'string', 'enum': ['celsius', 'fahrenheit']}
+},
+'required': ['location']
+}
+}
+Repeat this pattern for every tool in all three chains. Keep all schemas in a single file. This file is
+your ground truth for evaluation.
+2.2 Create tools/mock_executor.py — deterministic tool execution
+Do NOT call real APIs. Use a mock executor that returns plausible, deterministic responses
+based on inputs. This is critical for reproducibility:
+# tools/mock_executor.py
+import random
+def execute_tool(tool_name: str, params: dict) -> dict:
+if tool_name == 'get_weather':
+loc = params.get('location', 'unknown')
+# Deterministic based on location string hash
+seed = sum(ord(c) for c in loc)
+random.seed(seed)
+return {
+'location': loc,
+'temperature': round(random.uniform(0, 35), 1),
+'condition': random.choice(['sunny','rainy','cloudy']),
+'humidity': round(random.uniform(30, 90), 1)
+}
+# Add all other tools...
+raise ValueError(f'Unknown tool: {tool_name}')
+Why mock? Real API calls introduce latency, rate limits, and non-determinism. A mock
+executor gives you full control, costs nothing, and is 100% reproducible.
+2.3 Create tools/validator.py — schema validation logic
+This is your judge-free evaluation engine. Every output is checked programmatically:
+# tools/validator.py
+import json
+import jsonschema
+def validate_tool_call(output: str, expected_schema: dict) -> dict:
+result = {'parses': False, 'has_required': False,
+'types_valid': False, 'schema_valid': False}
+try:
+parsed = json.loads(output)
+result['parses'] = True
+jsonschema.validate(parsed, expected_schema)
+result['has_required'] = True
+result['types_valid'] = True
+result['schema_valid'] = True
+except json.JSONDecodeError:
+pass # parses stays False
+except jsonschema.ValidationError as e:
+result['has_required'] = 'required' not in str(e.message)
+return result
+Phase 3 — Perturbation Engine
+3.1 Create perturbations/engine.py
+Build a class that applies each perturbation type to a query string. Use nlpaug for character-
+level noise and write custom functions for semantic perturbations:
+# perturbations/engine.py
+import nlpaug.augmenter.char as nac
+import nlpaug.augmenter.word as naw
+import random
+class PerturbationEngine:
+def __init__(self, severity='moderate'):
+# severity: 'clean', 'moderate', 'severe'
+self.severity = severity
+self.typo_aug = nac.KeyboardAug(
+aug_char_p=0.05 if severity=='moderate' else 0.15
+)
+def apply(self, query: str, ptype: str) -> str:
+if ptype == 'clean':
+return query
+if ptype == 'typo':
+return self.typo_aug.augment(query)[0]
+if ptype == 'missing_context':
+return self._drop_entity(query)
+if ptype == 'ambiguity':
+return self._inject_ambiguity(query)
+if ptype == 'paraphrase':
+return self._paraphrase(query)
+raise ValueError(f'Unknown perturbation: {ptype}')
+def _drop_entity(self, query: str) -> str:
+# Remove the last noun phrase (simple heuristic)
+words = query.split()
+if len(words) > 4:
+return ' '.join(words[:-2]) + '?'
+return query
+Important: For paraphrasing, use a small T5 model (t5-small via HuggingFace) to generate
+paraphrases programmatically. Do NOT use ChatGPT/Claude for paraphrase generation —
+it adds a dependency and cost.
+3.2 Create perturbations/dataset.py — the query dataset
+Write 30 base queries across the three tool domains. These are your clean starting queries.
+Apply all perturbation types to each to generate the full experimental dataset:
+# perturbations/dataset.py
+BASE_QUERIES = {
+'chain_a': [ # weather -> umbrella
+'What is the weather like in London today?',
+'Should I bring an umbrella in Paris?',
+# ... 8 more queries
+],
+'chain_b': [ # search -> extract -> summarise
+'Find recent news about renewable energy and summarise it.',
+# ... 9 more queries
+],
+'chain_c': [ # parse date -> calendar -> events -> suggest -> create
+'Schedule a meeting next Monday at 3pm if I am free.',
+# ... 9 more queries
+]
+}
+Total dataset size: 30 queries × 5 perturbation types × 3 severity levels = 450 experimental
+instances per model × 3 models = 1,350 total runs. This is sufficient for statistical significance
+testing.
+Phase 4 — Chain Execution Engine
+4.1 Create experiment/chain_runner.py — the core execution loop
+This is the most important file. It runs a perturbed query through a multi-step tool chain and
+records every intermediate state:
+# experiment/chain_runner.py
+import json, time
+from tools.validator import validate_tool_call
+from tools.mock_executor import execute_tool
+class ChainRunner:
+def __init__(self, model_name: str, chain_def: list):
+self.model = model_name
+self.chain = chain_def # list of tool schema dicts
+def run(self, query: str) -> dict:
+history = []
+context = query # starts as the user query
+chain_success = True
+for step_idx, tool_schema in enumerate(self.chain):
+prompt = self._build_prompt(context, tool_schema)
+raw_output = self._call_model(prompt)
+validation = validate_tool_call(raw_output, tool_schema)
+step_result = {
+'step': step_idx,
+'tool': tool_schema['name'],
+'raw_output': raw_output,
+'validation': validation,
+'success': validation['schema_valid']
+}
+if validation['schema_valid']:
+tool_output = execute_tool(
+tool_schema['name'],
+json.loads(raw_output)
+)
+context = json.dumps(tool_output) # feed forward
+else:
+chain_success = False
+context = raw_output # feed broken output forward
+# DO NOT break — continue chain to measure cascade
+history.append(step_result)
+return {'query': query, 'steps': history,
+'chain_success': chain_success}
+Critical Design Choice: When step i fails, DO NOT stop the chain. Feed the broken output
+into step i+1 anyway. This is how you measure cascade failure — the whole point of the
+paper.
+4.2 Create experiment/run_all.py — the main experiment driver
+This script orchestrates the full experimental grid and saves results to a JSON file:
+# experiment/run_all.py
+import json, itertools
+from perturbations.engine import PerturbationEngine
+from perturbations.dataset import BASE_QUERIES
+from experiment.chain_runner import ChainRunner
+from tools.schemas import CHAIN_A, CHAIN_B, CHAIN_C
+MODELS = ['llama3.1:8b', 'mistral:7b-instruct-v0.3', 'qwen2.5:7b-instruct']
+PTYPES = ['clean', 'typo', 'missing_context', 'ambiguity', 'paraphrase']
+SEVERITIES = ['moderate', 'severe']
+CHAINS = {'chain_a': CHAIN_A, 'chain_b': CHAIN_B, 'chain_c': CHAIN_C}
+results = []
+for model, chain_name, ptype, severity in itertools.product(
+MODELS, CHAINS.keys(), PTYPES, SEVERITIES):
+engine = PerturbationEngine(severity=severity)
+runner = ChainRunner(model, CHAINS[chain_name])
+for query in BASE_QUERIES[chain_name]:
+perturbed = engine.apply(query, ptype)
+result = runner.run(perturbed)
+result.update({'model': model, 'chain': chain_name,
+'ptype': ptype, 'severity': severity,
+'original_query': query})
+results.append(result)
+with open('results/raw_results.json', 'w') as f:
+json.dump(results, f, indent=2)
+Phase 5 — Metric Computation and Analysis
+5.1 Create analysis/metrics.py — compute all four metrics
+Load raw_results.json and compute SSR, CFR, SVS, and RR per model/chain/perturbation
+type:
+# analysis/metrics.py
+import json, pandas as pd, numpy as np
+def load_results(path='results/raw_results.json'):
+with open(path) as f:
+return json.load(f)
+def compute_ssr(results):
+"""Step success rate per step index."""
+rows = []
+for r in results:
+for step in r['steps']:
+rows.append({
+'model': r['model'], 'chain': r['chain'],
+'ptype': r['ptype'], 'severity': r['severity'],
+'step': step['step'], 'success': step['success']
+})
+df = pd.DataFrame(rows)
+return
+df.groupby(['model','chain','ptype','severity','step'])['success'].mean()
+def compute_cfr(results):
+"""Cascade failure: P(step_i fails | step_{i-1} failed)."""
+conditioned = []
+for r in results:
+steps = r['steps']
+for i in range(1, len(steps)):
+if not steps[i-1]['success']: # previous step failed
+conditioned.append(not steps[i]['success'])
+return np.mean(conditioned) if conditioned else 0.0
+5.2 Create analysis/stats.py — significance testing
+IEEE reviewers require statistical validation. Use Welch's ANOVA (same as RoTBench) and
+bootstrap confidence intervals:
+# analysis/stats.py
+from scipy import stats
+import numpy as np
+def welch_anova(*groups):
+f_stat, p_value = stats.f_oneway(*groups)
+return {'f_statistic': f_stat, 'p_value': p_value,
+'significant': p_value < 0.05}
+def bootstrap_ci(data, n_bootstrap=10000, ci=0.95):
+bootstraps = [np.mean(np.random.choice(data, len(data)))
+for _ in range(n_bootstrap)]
+lower = np.percentile(bootstraps, (1 - ci) / 2 * 100)
+upper = np.percentile(bootstraps, (1 + ci) / 2 * 100)
+return {'mean': np.mean(data), 'ci_lower': lower, 'ci_upper': upper}
+5.3 Create analysis/plots.py — all paper figures
+Generate the four key figures the paper needs. Save as high-resolution PNG for IEEE
+submission:
+# Figure 1: Step success rate across chain positions
+# X-axis: step number, Y-axis: SSR, lines per perturbation type
+# One subplot per model
+# Figure 2: Cascade failure rate heatmap
+# Rows: perturbation type, Columns: chain length
+# Cell value: CFR, annotated with p-values
+# Figure 3: Schema validity breakdown
+# Stacked bar: parses / has_required / types_valid
+# Per model, grouped by severity
+# Figure 4: Recovery rate vs perturbation severity
+# Line plot: clean -> moderate -> severe
+# One line per model
+Phase 6 — Reproducibility Package
+6.1 Repository structure to create
+IEEE journals require a replication package. Create this exact directory structure:
+cascade-tool-robustness/
+├── README.md
+├── requirements.txt
+├── tools/
+│ ├── schemas.py
+│ ├── mock_executor.py
+│ └── validator.py
+├── perturbations/
+│ ├── engine.py
+│ └── dataset.py
+├── experiment/
+│ ├── chain_runner.py
+│ └── run_all.py
+├── analysis/
+│ ├── metrics.py
+│ ├── stats.py
+│ └── plots.py
+├── results/
+│ └── raw_results.json (generated)
+└── tests/
+├── test_validator.py
+└── test_perturbations.py
+6.2 Create tests/ — unit tests for all components
+Run pytest before submitting results. Reviewers may try to replicate your code:
+# tests/test_validator.py
+from tools.validator import validate_tool_call
+def test_valid_json_passes():
+schema = {'type': 'object', 'required': ['location'],
+'properties': {'location': {'type': 'string'}}}
+result = validate_tool_call('{"location": "London"}', schema)
+assert result['schema_valid'] == True
+def test_invalid_json_fails():
+schema = {'type': 'object', 'required': ['location'],
+'properties': {'location': {'type': 'string'}}}
+result = validate_tool_call('not json at all', schema)
+assert result['parses'] == False
+assert result['schema_valid'] == False
+5. Paper Writing Guide
+5.1 Target Venues (in priority order)
+Venue Why it fits / Acceptance rate
+IEEE Transactions on Neural
+Networks and Learning
+Systems (TNNLS)
+Accepts empirical benchmarking of neural models. Impact
+factor ~14. Slower review but very high impact.
+IEEE Transactions on Big Data Explicitly welcomes LLM benchmarking and empirical
+studies. Good fit for systematic evaluation papers.
+IEEE Access Open access, faster review (~2–3 months), lower bar but
+indexed and respected. Good safety net.
+EMNLP / ACL Findings Strong NLP venue fit as secondary option if IEEE reviewers
+consider it out of scope. High credibility.
+5.2 Abstract Template
+Template: Tool-use agents that chain multiple API calls are increasingly deployed in
+production, yet their robustness to real-world prompt noise remains unstudied. Existing
+benchmarks (notably RoTBench) evaluate only single-turn tool selection under schema-
+level perturbation. We present the first study of cascade failure propagation in multi-step
+tool-use chains under prompt-level perturbation. We define [N] perturbation types across
+three severity levels and evaluate three modern sub-10B open-source models (Llama-3.1-
+8B, Mistral-7B-v0.3, Qwen2.5-7B) on chains of 2, 3, and 5 steps using four programmatic
+metrics. We find that [KEY FINDING 1] and [KEY FINDING 2], demonstrating that cascade
+failures represent a distinct and undercharacterised failure mode not captured by single-turn
+benchmarks.
+5.3 Related Work Positioning
+The related work section must clearly position against RoTBench. Recommended framing:
+"RoTBench [cite] provides the most relevant prior work, introducing a multi-level benchmark for
+tool-use robustness under schema-level noise. However, their evaluation is explicitly limited to a
+single tool-use round, and their perturbations target tool and parameter name obfuscation rather
+than user query corruption. We extend this work along three axes: (1) multi-step chain
+evaluation, (2) prompt-side perturbation, and (3) modern instruction-tuned models with native
+JSON function calling."
+5.4 Key Tables the Paper Needs
+Table Content
+Table 1: Dataset Statistics Queries, chains, perturbation types, total instances —
+mirrors RoTBench Table 1 format for direct comparability
+Table 2: Step Success Rate SSR per step, per model, per perturbation type — main
+results table
+Table 3: Cascade Failure Rate CFR matrix — model × chain length × perturbation type.
+This is your signature table.
+Table 4: Welch's ANOVA F-statistic and p-value per model per metric — mirrors
+RoTBench Table 3 exactly for comparability
+Table 5: Schema Validity
+Breakdown
+Parses / has_required / types_valid per model
+6. Project Timeline
+Week Deliverable
+Week 1–2 Phase 1 complete: all models running locally, JSON mode
+verified. Phase 2 complete: all schemas and mock executor
+done.
+Week 3–4 Phase 3 complete: perturbation engine tested on all 5
+types. Dataset of 30 base queries written and reviewed.
+Week 5–6 Phase 4 complete: chain runner working end-to-end on all 3
+chains for 1 model. run_all.py producing raw_results.json.
+Week 7 Run full experiment grid for all 3 models. Save results. Run
+Phase 5 metrics on all data.
+Week 8 Phase 5 complete: all figures generated, significance tests
+run. Begin writing paper.
+Week 9–12 Paper writing: introduction, related work, methodology,
+results, discussion, conclusion.
+Week 13 Internal review, reproducibility check, submit replication
+package to Zenodo, submit paper.
+7. Quick Reference — Do / Don't
+DO DON'T
+Perturb the user query Perturb tool/parameter names in the schema (that is
+RoTBench)
+Continue the chain after a
+failure to measure cascade
+Stop the chain on first failure
+Use programmatic validation
+(jsonschema)
+Use GPT-4 / Claude as evaluation judge
+Use Llama-3.1, Mistral-7B-v0.3,
+Qwen2.5-7B
+Use ToolLLaMA or NexusRaven (already in RoTBench)
+Use mock tool executor for
+determinism
+Call real APIs (rate limits, cost, non-determinism)
+Report Welch's ANOVA and
+bootstrap CIs
+Report only means without significance tests
+Release full code + data on
+Zenodo/GitHub
+Submit without replication package
+Frame as extension of
+RoTBench
+Ignore RoTBench or pretend it doesn't exist
+This document is a living build guide. Update it as implementation decisions are made.
+All resources required are free and open-source. Zero API budget required.

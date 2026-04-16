@@ -1,0 +1,655 @@
+[
+  {
+    "query": "What's the weather like in London?",
+    "original": "What's the weather like in London?",
+    "ptype": "clean",
+    "severity": "moderate",
+    "condition": "a) London example",
+    "extracted_location": "London"
+  },
+  {
+    "query": "What's the weather like in London?",
+    "original": "What's the weather like in London?",
+    "ptype": "clean",
+    "severity": "moderate",
+    "condition": "b) Tokyo example",
+    "extracted_location": "London"
+  },
+  {
+    "query": "What's the weather like in London?",
+    "original": "What's the weather like in London?",
+    "ptype": "clean",
+    "severity": "moderate",
+    "condition": "c) No example",
+    "extracted_location": "London"
+  },
+  {
+    "query": "What ' s the weathed loke in Londoh?",
+    "original": "What's the weather like in London?",
+    "ptype": "typo",
+    "severity": "moderate",
+    "condition": "a) London example",
+    "extracted_location": "London"
+  },
+  {
+    "query": "What ' s the weathed loke in Londoh?",
+    "original": "What's the weather like in London?",
+    "ptype": "typo",
+    "severity": "moderate",
+    "condition": "b) Tokyo example",
+    "extracted_location": "London"
+  },
+  {
+    "query": "What ' s the weathed loke in Londoh?",
+    "original": "What's the weather like in London?",
+    "ptype": "typo",
+    "severity": "moderate",
+    "condition": "c) No example",
+    "extracted_location": "London"
+  },
+  {
+    "query": "What's the weather like in the city?",
+    "original": "What's the weather like in London?",
+    "ptype": "ambiguity",
+    "severity": "moderate",
+    "condition": "a) London example",
+    "extracted_location": "city"
+  },
+  {
+    "query": "What's the weather like in the city?",
+    "original": "What's the weather like in London?",
+    "ptype": "ambiguity",
+    "severity": "moderate",
+    "condition": "b) Tokyo example",
+    "extracted_location": "Los Angeles"
+  },
+  {
+    "query": "What's the weather like in the city?",
+    "original": "What's the weather like in London?",
+    "ptype": "ambiguity",
+    "severity": "moderate",
+    "condition": "c) No example",
+    "extracted_location": "city"
+  },
+  {
+    "query": "Should I bring an umbrella in Paris?",
+    "original": "Should I bring an umbrella in Paris?",
+    "ptype": "clean",
+    "severity": "moderate",
+    "condition": "a) London example",
+    "extracted_location": "Paris"
+  },
+  {
+    "query": "Should I bring an umbrella in Paris?",
+    "original": "Should I bring an umbrella in Paris?",
+    "ptype": "clean",
+    "severity": "moderate",
+    "condition": "b) Tokyo example",
+    "extracted_location": "Paris"
+  },
+  {
+    "query": "Should I bring an umbrella in Paris?",
+    "original": "Should I bring an umbrella in Paris?",
+    "ptype": "clean",
+    "severity": "moderate",
+    "condition": "c) No example",
+    "extracted_location": "Paris"
+  },
+  {
+    "query": "Shokld I bring an umbrellA in Pa%is?",
+    "original": "Should I bring an umbrella in Paris?",
+    "ptype": "typo",
+    "severity": "moderate",
+    "condition": "a) London example",
+    "extracted_location": "Pa%is"
+  },
+  {
+    "query": "Shokld I bring an umbrellA in Pa%is?",
+    "original": "Should I bring an umbrella in Paris?",
+    "ptype": "typo",
+    "severity": "moderate",
+    "condition": "b) Tokyo example",
+    "extracted_location": "Pa%is"
+  },
+  {
+    "query": "Shokld I bring an umbrellA in Pa%is?",
+    "original": "Should I bring an umbrella in Paris?",
+    "ptype": "typo",
+    "severity": "moderate",
+    "condition": "c) No example",
+    "extracted_location": "Pa%is"
+  },
+  {
+    "query": "Should I bring an rain gear in the capital?",
+    "original": "Should I bring an umbrella in Paris?",
+    "ptype": "ambiguity",
+    "severity": "moderate",
+    "condition": "a) London example",
+    "extracted_location": "capital city"
+  },
+  {
+    "query": "Should I bring an rain gear in the capital?",
+    "original": "Should I bring an umbrella in Paris?",
+    "ptype": "ambiguity",
+    "severity": "moderate",
+    "condition": "b) Tokyo example",
+    "extracted_location": "capital city"
+  },
+  {
+    "query": "Should I bring an rain gear in the capital?",
+    "original": "Should I bring an umbrella in Paris?",
+    "ptype": "ambiguity",
+    "severity": "moderate",
+    "condition": "c) No example",
+    "extracted_location": "capital"
+  },
+  {
+    "query": "Is it sunny in Tokyo today?",
+    "original": "Is it sunny in Tokyo today?",
+    "ptype": "clean",
+    "severity": "moderate",
+    "condition": "a) London example",
+    "extracted_location": "Tokyo"
+  },
+  {
+    "query": "Is it sunny in Tokyo today?",
+    "original": "Is it sunny in Tokyo today?",
+    "ptype": "clean",
+    "severity": "moderate",
+    "condition": "b) Tokyo example",
+    "extracted_location": "Tokyo"
+  },
+  {
+    "query": "Is it sunny in Tokyo today?",
+    "original": "Is it sunny in Tokyo today?",
+    "ptype": "clean",
+    "severity": "moderate",
+    "condition": "c) No example",
+    "extracted_location": "Tokyo"
+  },
+  {
+    "query": "Is it sunhy in Tokjo 6oday?",
+    "original": "Is it sunny in Tokyo today?",
+    "ptype": "typo",
+    "severity": "moderate",
+    "condition": "a) London example",
+    "extracted_location": "Tokyo"
+  },
+  {
+    "query": "Is it sunhy in Tokjo 6oday?",
+    "original": "Is it sunny in Tokyo today?",
+    "ptype": "typo",
+    "severity": "moderate",
+    "condition": "b) Tokyo example",
+    "extracted_location": "Tokyo"
+  },
+  {
+    "query": "Is it sunhy in Tokjo 6oday?",
+    "original": "Is it sunny in Tokyo today?",
+    "ptype": "typo",
+    "severity": "moderate",
+    "condition": "c) No example",
+    "extracted_location": "Tokyo"
+  },
+  {
+    "query": "Is it clear in the metropolitan area today?",
+    "original": "Is it sunny in Tokyo today?",
+    "ptype": "ambiguity",
+    "severity": "moderate",
+    "condition": "a) London example",
+    "extracted_location": "metropolitan area"
+  },
+  {
+    "query": "Is it clear in the metropolitan area today?",
+    "original": "Is it sunny in Tokyo today?",
+    "ptype": "ambiguity",
+    "severity": "moderate",
+    "condition": "b) Tokyo example",
+    "extracted_location": "metropolitan area"
+  },
+  {
+    "query": "Is it clear in the metropolitan area today?",
+    "original": "Is it sunny in Tokyo today?",
+    "ptype": "ambiguity",
+    "severity": "moderate",
+    "condition": "c) No example",
+    "extracted_location": "metropolitan area"
+  },
+  {
+    "query": "What's the temperature in Berlin?",
+    "original": "What's the temperature in Berlin?",
+    "ptype": "clean",
+    "severity": "moderate",
+    "condition": "a) London example",
+    "extracted_location": "Berlin"
+  },
+  {
+    "query": "What's the temperature in Berlin?",
+    "original": "What's the temperature in Berlin?",
+    "ptype": "clean",
+    "severity": "moderate",
+    "condition": "b) Tokyo example",
+    "extracted_location": "Berlin"
+  },
+  {
+    "query": "What's the temperature in Berlin?",
+    "original": "What's the temperature in Berlin?",
+    "ptype": "clean",
+    "severity": "moderate",
+    "condition": "c) No example",
+    "extracted_location": "Berlin"
+  },
+  {
+    "query": "1hat ' s the temperaturd in Ber.in?",
+    "original": "What's the temperature in Berlin?",
+    "ptype": "typo",
+    "severity": "moderate",
+    "condition": "a) London example",
+    "extracted_location": "Berlin"
+  },
+  {
+    "query": "1hat ' s the temperaturd in Ber.in?",
+    "original": "What's the temperature in Berlin?",
+    "ptype": "typo",
+    "severity": "moderate",
+    "condition": "b) Tokyo example",
+    "extracted_location": "Berlin"
+  },
+  {
+    "query": "1hat ' s the temperaturd in Ber.in?",
+    "original": "What's the temperature in Berlin?",
+    "ptype": "typo",
+    "severity": "moderate",
+    "condition": "c) No example",
+    "extracted_location": "Berin"
+  },
+  {
+    "query": "What's the temperature in the german city?",
+    "original": "What's the temperature in Berlin?",
+    "ptype": "ambiguity",
+    "severity": "moderate",
+    "condition": "a) London example",
+    "extracted_location": "Berlin"
+  },
+  {
+    "query": "What's the temperature in the german city?",
+    "original": "What's the temperature in Berlin?",
+    "ptype": "ambiguity",
+    "severity": "moderate",
+    "condition": "b) Tokyo example",
+    "extracted_location": "Berlin"
+  },
+  {
+    "query": "What's the temperature in the german city?",
+    "original": "What's the temperature in Berlin?",
+    "ptype": "ambiguity",
+    "severity": "moderate",
+    "condition": "c) No example",
+    "extracted_location": "germany"
+  },
+  {
+    "query": "Do I need an umbrella for Munich?",
+    "original": "Do I need an umbrella for Munich?",
+    "ptype": "clean",
+    "severity": "moderate",
+    "condition": "a) London example",
+    "extracted_location": "Munich"
+  },
+  {
+    "query": "Do I need an umbrella for Munich?",
+    "original": "Do I need an umbrella for Munich?",
+    "ptype": "clean",
+    "severity": "moderate",
+    "condition": "b) Tokyo example",
+    "extracted_location": "Munich"
+  },
+  {
+    "query": "Do I need an umbrella for Munich?",
+    "original": "Do I need an umbrella for Munich?",
+    "ptype": "clean",
+    "severity": "moderate",
+    "condition": "c) No example",
+    "extracted_location": "Munich"
+  },
+  {
+    "query": "Do I neee an umb3ella for Municy?",
+    "original": "Do I need an umbrella for Munich?",
+    "ptype": "typo",
+    "severity": "moderate",
+    "condition": "a) London example",
+    "extracted_location": "Municy"
+  },
+  {
+    "query": "Do I neee an umb3ella for Municy?",
+    "original": "Do I need an umbrella for Munich?",
+    "ptype": "typo",
+    "severity": "moderate",
+    "condition": "b) Tokyo example",
+    "extracted_location": "Municy"
+  },
+  {
+    "query": "Do I neee an umb3ella for Municy?",
+    "original": "Do I need an umbrella for Munich?",
+    "ptype": "typo",
+    "severity": "moderate",
+    "condition": "c) No example",
+    "extracted_location": "Municy"
+  },
+  {
+    "query": "Do I need an rain gear for the bavarian city?",
+    "original": "Do I need an umbrella for Munich?",
+    "ptype": "ambiguity",
+    "severity": "moderate",
+    "condition": "a) London example",
+    "extracted_location": "Bavaria"
+  },
+  {
+    "query": "Do I need an rain gear for the bavarian city?",
+    "original": "Do I need an umbrella for Munich?",
+    "ptype": "ambiguity",
+    "severity": "moderate",
+    "condition": "b) Tokyo example",
+    "extracted_location": "Bavaria"
+  },
+  {
+    "query": "Do I need an rain gear for the bavarian city?",
+    "original": "Do I need an umbrella for Munich?",
+    "ptype": "ambiguity",
+    "severity": "moderate",
+    "condition": "c) No example",
+    "extracted_location": "Bavaria"
+  },
+  {
+    "query": "Is it going to be cloudy in Sydney?",
+    "original": "Is it going to be cloudy in Sydney?",
+    "ptype": "clean",
+    "severity": "moderate",
+    "condition": "a) London example",
+    "extracted_location": "Sydney"
+  },
+  {
+    "query": "Is it going to be cloudy in Sydney?",
+    "original": "Is it going to be cloudy in Sydney?",
+    "ptype": "clean",
+    "severity": "moderate",
+    "condition": "b) Tokyo example",
+    "extracted_location": "Sydney"
+  },
+  {
+    "query": "Is it going to be cloudy in Sydney?",
+    "original": "Is it going to be cloudy in Sydney?",
+    "ptype": "clean",
+    "severity": "moderate",
+    "condition": "c) No example",
+    "extracted_location": "Sydney"
+  },
+  {
+    "query": "Is it Boing to be cloucy in S6dney?",
+    "original": "Is it going to be cloudy in Sydney?",
+    "ptype": "typo",
+    "severity": "moderate",
+    "condition": "a) London example",
+    "extracted_location": "Sydney"
+  },
+  {
+    "query": "Is it Boing to be cloucy in S6dney?",
+    "original": "Is it going to be cloudy in Sydney?",
+    "ptype": "typo",
+    "severity": "moderate",
+    "condition": "b) Tokyo example",
+    "extracted_location": "Sydney"
+  },
+  {
+    "query": "Is it Boing to be cloucy in S6dney?",
+    "original": "Is it going to be cloudy in Sydney?",
+    "ptype": "typo",
+    "severity": "moderate",
+    "condition": "c) No example",
+    "extracted_location": "S6dney"
+  },
+  {
+    "query": "Is it going to be overcast in the australian city?",
+    "original": "Is it going to be cloudy in Sydney?",
+    "ptype": "ambiguity",
+    "severity": "moderate",
+    "condition": "a) London example",
+    "extracted_location": "Sydney"
+  },
+  {
+    "query": "Is it going to be overcast in the australian city?",
+    "original": "Is it going to be cloudy in Sydney?",
+    "ptype": "ambiguity",
+    "severity": "moderate",
+    "condition": "b) Tokyo example",
+    "extracted_location": "Adelaide"
+  },
+  {
+    "query": "Is it going to be overcast in the australian city?",
+    "original": "Is it going to be cloudy in Sydney?",
+    "ptype": "ambiguity",
+    "severity": "moderate",
+    "condition": "c) No example",
+    "extracted_location": {
+      "country": "Australia",
+      "city": "Sydney"
+    }
+  },
+  {
+    "query": "What should I wear in Rome today?",
+    "original": "What should I wear in Rome today?",
+    "ptype": "clean",
+    "severity": "moderate",
+    "condition": "a) London example",
+    "extracted_location": "Rome"
+  },
+  {
+    "query": "What should I wear in Rome today?",
+    "original": "What should I wear in Rome today?",
+    "ptype": "clean",
+    "severity": "moderate",
+    "condition": "b) Tokyo example",
+    "extracted_location": "Rome"
+  },
+  {
+    "query": "What should I wear in Rome today?",
+    "original": "What should I wear in Rome today?",
+    "ptype": "clean",
+    "severity": "moderate",
+    "condition": "c) No example",
+    "extracted_location": "Rome"
+  },
+  {
+    "query": "What Qhould I wea% in Roke today?",
+    "original": "What should I wear in Rome today?",
+    "ptype": "typo",
+    "severity": "moderate",
+    "condition": "a) London example",
+    "extracted_location": "Roke"
+  },
+  {
+    "query": "What Qhould I wea% in Roke today?",
+    "original": "What should I wear in Rome today?",
+    "ptype": "typo",
+    "severity": "moderate",
+    "condition": "b) Tokyo example",
+    "extracted_location": "Roke"
+  },
+  {
+    "query": "What Qhould I wea% in Roke today?",
+    "original": "What should I wear in Rome today?",
+    "ptype": "typo",
+    "severity": "moderate",
+    "condition": "c) No example",
+    "extracted_location": "Wea% Roke"
+  },
+  {
+    "query": "What should I wear in the italian city today?",
+    "original": "What should I wear in Rome today?",
+    "ptype": "ambiguity",
+    "severity": "moderate",
+    "condition": "a) London example",
+    "extracted_location": "Italian City"
+  },
+  {
+    "query": "What should I wear in the italian city today?",
+    "original": "What should I wear in Rome today?",
+    "ptype": "ambiguity",
+    "severity": "moderate",
+    "condition": "b) Tokyo example",
+    "extracted_location": "Italian City"
+  },
+  {
+    "query": "What should I wear in the italian city today?",
+    "original": "What should I wear in Rome today?",
+    "ptype": "ambiguity",
+    "severity": "moderate",
+    "condition": "c) No example",
+    "extracted_location": "Italian City"
+  },
+  {
+    "query": "Check weather for Madrid please",
+    "original": "Check weather for Madrid please",
+    "ptype": "clean",
+    "severity": "moderate",
+    "condition": "a) London example",
+    "extracted_location": "Madrid"
+  },
+  {
+    "query": "Check weather for Madrid please",
+    "original": "Check weather for Madrid please",
+    "ptype": "clean",
+    "severity": "moderate",
+    "condition": "b) Tokyo example",
+    "extracted_location": "Madrid"
+  },
+  {
+    "query": "Check weather for Madrid please",
+    "original": "Check weather for Madrid please",
+    "ptype": "clean",
+    "severity": "moderate",
+    "condition": "c) No example",
+    "extracted_location": "Madrid"
+  },
+  {
+    "query": "Check wewther for MadriC please",
+    "original": "Check weather for Madrid please",
+    "ptype": "typo",
+    "severity": "moderate",
+    "condition": "a) London example",
+    "extracted_location": "Madrid"
+  },
+  {
+    "query": "Check wewther for MadriC please",
+    "original": "Check weather for Madrid please",
+    "ptype": "typo",
+    "severity": "moderate",
+    "condition": "b) Tokyo example",
+    "extracted_location": "Madrid"
+  },
+  {
+    "query": "Check wewther for MadriC please",
+    "original": "Check weather for Madrid please",
+    "ptype": "typo",
+    "severity": "moderate",
+    "condition": "c) No example",
+    "extracted_location": "MadriC"
+  },
+  {
+    "query": "Check weather for the spanish city please",
+    "original": "Check weather for Madrid please",
+    "ptype": "ambiguity",
+    "severity": "moderate",
+    "condition": "a) London example",
+    "extracted_location": "Barcelona"
+  },
+  {
+    "query": "Check weather for the spanish city please",
+    "original": "Check weather for Madrid please",
+    "ptype": "ambiguity",
+    "severity": "moderate",
+    "condition": "b) Tokyo example",
+    "extracted_location": "Barcelona"
+  },
+  {
+    "query": "Check weather for the spanish city please",
+    "original": "Check weather for Madrid please",
+    "ptype": "ambiguity",
+    "severity": "moderate",
+    "condition": "c) No example",
+    "extracted_location": {
+      "country": "Spain"
+    }
+  },
+  {
+    "query": "Will I need a coat in Vienna?",
+    "original": "Will I need a coat in Vienna?",
+    "ptype": "clean",
+    "severity": "moderate",
+    "condition": "a) London example",
+    "extracted_location": "Vienna"
+  },
+  {
+    "query": "Will I need a coat in Vienna?",
+    "original": "Will I need a coat in Vienna?",
+    "ptype": "clean",
+    "severity": "moderate",
+    "condition": "b) Tokyo example",
+    "extracted_location": "Vienna"
+  },
+  {
+    "query": "Will I need a coat in Vienna?",
+    "original": "Will I need a coat in Vienna?",
+    "ptype": "clean",
+    "severity": "moderate",
+    "condition": "c) No example",
+    "extracted_location": "Vienna"
+  },
+  {
+    "query": "WKll I Jeed a coat in Vi@nna?",
+    "original": "Will I need a coat in Vienna?",
+    "ptype": "typo",
+    "severity": "moderate",
+    "condition": "a) London example",
+    "extracted_location": "Vienna"
+  },
+  {
+    "query": "WKll I Jeed a coat in Vi@nna?",
+    "original": "Will I need a coat in Vienna?",
+    "ptype": "typo",
+    "severity": "moderate",
+    "condition": "b) Tokyo example",
+    "extracted_location": "Vienna"
+  },
+  {
+    "query": "WKll I Jeed a coat in Vi@nna?",
+    "original": "Will I need a coat in Vienna?",
+    "ptype": "typo",
+    "severity": "moderate",
+    "condition": "c) No example",
+    "extracted_location": "Vi\u00e0na"
+  },
+  {
+    "query": "Will I need a coat in the austrian city?",
+    "original": "Will I need a coat in Vienna?",
+    "ptype": "ambiguity",
+    "severity": "moderate",
+    "condition": "a) London example",
+    "extracted_location": "Austria"
+  },
+  {
+    "query": "Will I need a coat in the austrian city?",
+    "original": "Will I need a coat in Vienna?",
+    "ptype": "ambiguity",
+    "severity": "moderate",
+    "condition": "b) Tokyo example",
+    "extracted_location": "Austria"
+  },
+  {
+    "query": "Will I need a coat in the austrian city?",
+    "original": "Will I need a coat in Vienna?",
+    "ptype": "ambiguity",
+    "severity": "moderate",
+    "condition": "c) No example",
+    "extracted_location": "Austrian City"
+  }
+]
