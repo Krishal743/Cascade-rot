@@ -3,7 +3,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/)
 [![Paper](https://img.shields.io/badge/Paper-PDF-red.svg)](link-to-your-paper)
-[![Hardware](https://img.shields.io/badge/Hardware-RTX_3050_(6GB)-green.svg)]()
+
 
 > **Official implementation and dataset for the paper:**
 > *Brittle Semantic Collapse Under Perturbation: A Safety and Sustainability Assessment of Edge-Deployable LLMs for Location-Aware Tool-Use* > *(Accepted at IEEE ICWITE 2026)*
@@ -44,6 +44,7 @@ This creates an **illusion of robustness**: production systems validating only J
 │   └── Results_Analysis.ipynb      # Code to reproduce Table I, Table II, and Figures
 ├── requirements.txt
 └── README.md
+```
 Getting Started
 Prerequisites
 You need a consumer-grade GPU with at least 6GB VRAM to run this evaluation locally (e.g., NVIDIA RTX 3050).
